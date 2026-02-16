@@ -1,14 +1,15 @@
-const CACHE_NAME = 'coffee-voucher-v1';
+const CACHE_NAME = 'coffee-voucher-v2';
+const BASE = self.registration.scope;
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) =>
       cache.addAll([
-        '/',
-        '/logo.png',
-        '/icon-180.png',
-        '/icon-192.png',
-        '/icon-512.png',
+        BASE,
+        new URL('logo.png', BASE).href,
+        new URL('icon-180.png', BASE).href,
+        new URL('icon-192.png', BASE).href,
+        new URL('icon-512.png', BASE).href,
       ])
     )
   );

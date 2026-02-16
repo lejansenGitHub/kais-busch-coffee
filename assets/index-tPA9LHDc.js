@@ -1,5 +1,5 @@
 (function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))t(e);new MutationObserver(e=>{for(const c of e)if(c.type==="childList")for(const d of c.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&t(d)}).observe(document,{childList:!0,subtree:!0});function n(e){const c={};return e.integrity&&(c.integrity=e.integrity),e.referrerPolicy&&(c.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?c.credentials="include":e.crossOrigin==="anonymous"?c.credentials="omit":c.credentials="same-origin",c}function t(e){if(e.ep)return;e.ep=!0;const c=n(e);fetch(e.href,c)}})();const s="coffee-voucher-count",l="coffee-voucher-barcode",m=10;document.querySelector("#app").innerHTML=`
-  <img src="/logo.png" alt="Busch Backstube" class="logo" />
+  <img src="/kais-busch-coffee/logo.png" alt="Busch Backstube" class="logo" />
   <h1>Kai's Busch Coffee App</h1>
 
   <div class="slots-container">
