@@ -60,7 +60,7 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";import{S as f}from"./skills-C6ifZii
 
       <div class="hero-actions-row">
         <button class="skill-menu-btn" id="skill-menu-open" ${e.inFight?"disabled":""}>Skill Menu</button>
-        <button class="level-up-btn" id="level-up-open">Level Up</button>
+        <button class="level-up-btn" id="level-up-open" ${e.inFight?"disabled":""}>Level Up</button>
       </div>
 
       <div class="skills-header">Items</div>
