@@ -1,10 +1,10 @@
 export const SKILLS = {
   // Active — enemy debuffs
   blind_fury:    { name: 'Blind Fury',    type: 'A', desc: 'Gegner muss mit geschlossenen Augen werfen',                    maxUses: 1, duration: 2 },
-  repulsion:     { name: 'Repulsion',     type: 'A', desc: 'Gegner muss einen vollen Schritt zur Seite treten (Richtung frei wählbar)', maxUses: 1, duration: 2 },
+  repulsion:     { name: 'Repulsion',     type: 'A', desc: 'Gegner muss einen vollen Schritt zur Seite treten (Richtung frei wählbar)', maxUses: 1, duration: 3 },
   pushback:      { name: 'Pushback',      type: 'A', desc: 'Gegner muss einen Schritt zurücktreten',                              maxUses: 2, duration: 2 },
   iron_ward:     { name: 'Iron Ward',     type: 'A', desc: 'Innenkreis (Crit) ist für den Gegner blockiert',               maxUses: 1, duration: 3 },
-  off_balance:   { name: 'Off Balance',   type: 'A', desc: 'Gegner muss mit der schwachen Hand werfen',                       maxUses: 1, duration: 2 },
+  off_balance:   { name: 'Off Balance',   type: 'A', desc: 'Gegner muss mit der schwachen Hand werfen',                       maxUses: 1, duration: 3 },
   heavy_hands:   { name: 'Heavy Hands',   type: 'A', desc: 'Gegner muss Ofenhandschuhe tragen',                                maxUses: 1, duration: 3 },
   freeze:        { name: 'Freeze',        type: 'A', desc: 'Gegner muss den Wurfarm vollständig gestreckt halten',      maxUses: 1, duration: 2 },
   crude_sack:    { name: 'Crude Sack',    type: 'A', desc: 'Gegner muss mit dem Sandsack schlechter Qualität werfen',              maxUses: 1, duration: 2 },
@@ -16,9 +16,9 @@ export const SKILLS = {
 
   // Active — self buffs
   advance:        { name: 'Advance',        type: 'A', desc: 'Du darfst einen Schritt nach vorne machen',                              maxUses: 2, duration: 2 },
-  double_attack:  { name: 'Double Attack',  type: 'A', desc: 'Wirf mit beiden Armen gleichzeitig mit zwei Sandsäcken',  maxUses: 1, duration: 1 },
-  fine_sack:      { name: 'Fine Sack',      type: 'A', desc: 'Du wirfst mit dem Sandsack hoher Qualität',                   maxUses: 1, duration: 2 },
-  snipers_gambit: { name: "Sniper's Gambit", type: 'A', desc: 'Du gehst einen Schritt zurück, machst aber +1 Schaden in allen Zonen',   maxUses: 1, duration: 2 },
+  double_attack:  { name: 'Double Attack',  type: 'A', desc: 'Wirf mit beiden Armen gleichzeitig mit zwei Sandsäcken',  maxUses: 1, duration: 2 },
+  fine_sack:      { name: 'Fine Sack',      type: 'A', desc: 'Du wirfst mit dem Sandsack hoher Qualität',                   maxUses: 1, duration: 3 },
+  snipers_gambit: { name: "Sniper's Gambit", type: 'A', desc: 'Du gehst einen Schritt zurück, machst aber +2 Schaden in allen Zonen',   maxUses: 1, duration: 2 },
   war_cry:        { name: 'War Cry',        type: 'A', desc: 'Du erhältst +2 Aktionen in der nächsten Runde',                             maxUses: 1 },
 
   // Passive — self
