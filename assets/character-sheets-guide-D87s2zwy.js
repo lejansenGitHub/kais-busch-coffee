@@ -863,9 +863,25 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const e
 
     <hr class="guide-divider">
 
+    <!-- ALLIES -->
+    <div class="guide-section">
+      <div class="section-title">7. Verbündete</div>
+      <div class="guide-text">Im Laufe des Abenteuers schließen sich Lord Patten <strong>Verbündete</strong> an. Jeder Verbündete hat eine <strong>einzigartige Fähigkeit</strong>, mit der er im Kampf helfen kann.</div>
+
+      <div class="guide-text"><strong>Regeln:</strong></div>
+      <div class="guide-text">• Pro Kampf darf Sascha <strong>einen Verbündeten</strong> auswählen, der mit seiner Fähigkeit hilft.</div>
+      <div class="guide-text">• Sascha muss dies <strong>bei Kampfbeginn aktiv festlegen</strong> — vor dem ersten Wurf. Wenn er es vergisst oder nicht nutzt: <strong>Pech gehabt.</strong></div>
+      <div class="guide-text">• Pro Kampf kann nur <strong>ein</strong> Verbündeter helfen, nicht mehrere.</div>
+
+      <div class="section-subtitle">Ausnahme: Nick</div>
+      <div class="guide-text">Nick ist ein Schurke — er handelt <strong>auf eigene Faust</strong>. Er muss nicht von Sascha angefordert werden und zählt nicht als gewählter Verbündeter. Nick darf seinen <strong>Schattenwurf</strong> jederzeit einsetzen (2× im gesamten Spiel), auch zusätzlich zu einem anderen Verbündeten.</div>
+    </div>
+
+    <hr class="guide-divider">
+
     <!-- DAMAGE & HP -->
     <div class="guide-section">
-      <div class="section-title">7. Schaden & HP</div>
+      <div class="section-title">8. Schaden & HP</div>
       <div class="guide-text">Jeder Charakter hat einen <strong>Schadenswert pro Zone</strong>, der auf seiner Karte steht. Beispiel für einen Level-1-Charakter:</div>
 
       <div class="target-labels">
@@ -894,7 +910,7 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const e
 
     <!-- LEVEL UP & REWARDS -->
     <div class="guide-section">
-      <div class="section-title">8. Belohnungen & Level Up</div>
+      <div class="section-title">9. Belohnungen & Level Up</div>
       <div class="guide-text">Nach jedem besiegten Gegner erhältst du einen <strong>Belohnungs-Code</strong>. Diesen gibst du auf Lord Pattens Charakterseite ein, um einen neuen Skill oder ein Item freizuschalten.</div>
       <div class="guide-text">Zusätzlich kannst du nach jedem Kampf ein <strong>Level Up</strong> machen und wählen: Mehr HP, mehr Schaden im Außen-/Mittel-/Innenkreis. Alle 5 Level bekommst du +1 Aktion und +1 Skill-Slot.</div>
       <div class="guide-text">Auch <strong>Quests</strong> (Aufgaben von NPCs) belohnen dich mit Skills oder Items. Die Quest-Seite zeigt die Aufgabe, die Kriterien und den Code.</div>
@@ -904,7 +920,7 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const e
 
     <!-- RETRY -->
     <div class="guide-section">
-      <div class="section-title">9. Niederlagen & Wiederholung</div>
+      <div class="section-title">10. Niederlagen & Wiederholung</div>
       <div class="guide-text"><strong>Kampf verloren?</strong> Kein Problem — trinke ein Bier, um dich zu heilen, und fordere deinen Gegner erneut heraus. Du kannst so oft antreten, wie du möchtest.</div>
       <div class="guide-text"><strong>Quest nicht geschafft?</strong> Warte 5 Minuten, dann darfst du es erneut versuchen.</div>
       <div class="guide-text">Lord Patten ist dazu bestimmt zu gewinnen — es ist nur eine Frage der Zeit!</div>
