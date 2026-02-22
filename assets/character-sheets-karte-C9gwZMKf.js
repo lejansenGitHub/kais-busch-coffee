@@ -175,9 +175,9 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const e
   <text x="390" y="785" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Q</text>
   <text x="390" y="800" text-anchor="middle" fill="#2c3e50" font-size="11" font-weight="bold">16. Hubi</text>
 
-  <!-- 17. Hubi Mid-Boss (Lv7) -->
+  <!-- 17. Hubi Mid-Boss (Lv10) -->
   <circle cx="370" cy="733" r="18" fill="#e67e22" stroke="white" stroke-width="2"/>
-  <text x="370" y="739" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Lv7</text>
+  <text x="370" y="739" text-anchor="middle" fill="white" font-size="10" font-weight="bold">L10</text>
   <text x="370" y="715" text-anchor="middle" fill="#2c3e50" font-size="11" font-weight="bold">17. Hubi Boss</text>
 
   <!-- ===== ZONE 4 — Turmstra&#xDF;e (8 encounters) ===== -->
@@ -192,14 +192,14 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const e
   <text x="353" y="638" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Q</text>
   <text x="353" y="616" text-anchor="middle" fill="#2c3e50" font-size="11" font-weight="bold">19. Hendrik</text>
 
-  <!-- 20. Eva (Lv5) -->
+  <!-- 20. Eva (Lv9) -->
   <circle cx="341" cy="586" r="14" fill="#c0392b" stroke="white" stroke-width="1.5"/>
-  <text x="341" y="591" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Lv5</text>
+  <text x="341" y="591" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Lv9</text>
   <text x="341" y="569" text-anchor="middle" fill="#2c3e50" font-size="11" font-weight="bold">20. Eva</text>
 
-  <!-- 21. Elena (Lv7) -->
+  <!-- 21. Elena (Lv10) -->
   <circle cx="329" cy="539" r="14" fill="#c0392b" stroke="white" stroke-width="1.5"/>
-  <text x="329" y="544" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Lv7</text>
+  <text x="329" y="544" text-anchor="middle" fill="white" font-size="10" font-weight="bold">L10</text>
   <text x="329" y="522" text-anchor="middle" fill="#2c3e50" font-size="11" font-weight="bold">21. Elena</text>
 
   <!-- 22. Katta (Quest) -->
@@ -207,9 +207,9 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const e
   <text x="316" y="496" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Q</text>
   <text x="316" y="474" text-anchor="middle" fill="#2c3e50" font-size="11" font-weight="bold">22. Katta</text>
 
-  <!-- 23. Katta (Lv5) -->
+  <!-- 23. Katta (Lv12) -->
   <circle cx="304" cy="444" r="14" fill="#c0392b" stroke="white" stroke-width="1.5"/>
-  <text x="304" y="449" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Lv5</text>
+  <text x="304" y="449" text-anchor="middle" fill="white" font-size="10" font-weight="bold">L12</text>
   <text x="304" y="427" text-anchor="middle" fill="#2c3e50" font-size="11" font-weight="bold">23. Katta</text>
 
   <!-- 24. Kai (Quest) -->
@@ -217,21 +217,21 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const e
   <text x="292" y="401" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Q</text>
   <text x="292" y="379" text-anchor="middle" fill="#2c3e50" font-size="11" font-weight="bold">24. Kai</text>
 
-  <!-- 25. Kai strong (Lv6) -->
+  <!-- 25. Kai strong (Lv13) -->
   <circle cx="280" cy="349" r="14" fill="#c0392b" stroke="white" stroke-width="1.5"/>
-  <text x="280" y="354" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Lv6</text>
+  <text x="280" y="354" text-anchor="middle" fill="white" font-size="10" font-weight="bold">L13</text>
   <text x="280" y="332" text-anchor="middle" fill="#2c3e50" font-size="11" font-weight="bold">25. Kai</text>
 
   <!-- ===== ZONE 5 — Ende der Altstadt (2 encounters) ===== -->
 
-  <!-- 26. Simon Erwacht (Lv10) -->
+  <!-- 26. Simon Erwacht (Lv14) -->
   <circle cx="280" cy="250" r="14" fill="#c0392b" stroke="white" stroke-width="1.5"/>
-  <text x="280" y="255" text-anchor="middle" fill="white" font-size="10" font-weight="bold">L10</text>
+  <text x="280" y="255" text-anchor="middle" fill="white" font-size="10" font-weight="bold">L14</text>
   <text x="280" y="233" text-anchor="middle" fill="#2c3e50" font-size="11" font-weight="bold">26. Simon</text>
 
-  <!-- 27. Hubi Endboss (Lv11) -->
+  <!-- 27. Hubi Endboss (Lv15) -->
   <circle cx="230" cy="200" r="18" fill="#c0392b" stroke="white" stroke-width="2"/>
-  <text x="230" y="206" text-anchor="middle" fill="white" font-size="11" font-weight="bold">L11</text>
+  <text x="230" y="206" text-anchor="middle" fill="white" font-size="10" font-weight="bold">L15</text>
   <text x="230" y="182" text-anchor="middle" fill="#2c3e50" font-size="11" font-weight="bold">27. Hubi</text>
 
   <!-- ==================== LEGEND ==================== -->
