@@ -559,26 +559,9 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const e
 
     <hr class="guide-divider">
 
-    <!-- KREIDE & REVISION -->
-    <div class="guide-section">
-      <div class="section-title">7. Kreide im Kampf</div>
-      <div class="guide-text">Die Straßenkreide hat eine <strong>Doppelrolle</strong>: Sie wird benutzt, um die Zielscheibe zu malen, aber auch als Waffe im Kampf:</div>
-
-      <div class="skill-example">
-        <div class="skill-ex-header">
-          <div class="skill-ex-badge active">A</div>
-          <div class="skill-ex-name">Revision</div>
-        </div>
-        <div class="skill-ex-desc">Nach einem Treffer einen Teil der Zielscheibe mit Kreide <strong>übermalen</strong> — der Treffer zählt als Fehlwurf. 3 Einsätze.</div>
-        <div class="skill-ex-scenario">💡 Szenario: Dein Gegner trifft den Innenkreis — normalerweise hoher Schaden! Aber du setzt Revision ein: Du malst mit Kreide über die Stelle. Der Treffer wird annulliert, 0 Schaden. Du hast 3 solcher „Radierer“.</div>
-      </div>
-    </div>
-
-    <hr class="guide-divider">
-
     <!-- DAMAGE & HP -->
     <div class="guide-section">
-      <div class="section-title">8. Schaden & HP</div>
+      <div class="section-title">7. Schaden & HP</div>
       <div class="guide-text">Jeder Charakter hat einen <strong>Schadenswert pro Zone</strong>, der auf seiner Karte steht. Beispiel für einen Level-1-Charakter:</div>
 
       <div class="target-labels">
@@ -607,7 +590,7 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const e
 
     <!-- LEVEL UP & REWARDS -->
     <div class="guide-section">
-      <div class="section-title">9. Belohnungen & Level Up</div>
+      <div class="section-title">8. Belohnungen & Level Up</div>
       <div class="guide-text">Nach jedem besiegten Gegner erhältst du einen <strong>Belohnungs-Code</strong>. Diesen gibst du auf Lord Pattens Charakterseite ein, um einen neuen Skill oder ein Item freizuschalten.</div>
       <div class="guide-text">Zusätzlich kannst du nach jedem Kampf ein <strong>Level Up</strong> machen und wählen: Mehr HP, mehr Schaden im Außen-/Mittel-/Innenkreis. Alle 5 Level bekommst du +1 Aktion und +1 Skill-Slot.</div>
       <div class="guide-text">Auch <strong>Quests</strong> (Aufgaben von NPCs) belohnen dich mit Skills oder Items. Die Quest-Seite zeigt die Aufgabe, die Kriterien und den Code.</div>
@@ -617,7 +600,7 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const e
 
     <!-- RETRY -->
     <div class="guide-section">
-      <div class="section-title">10. Niederlagen & Wiederholung</div>
+      <div class="section-title">9. Niederlagen & Wiederholung</div>
       <div class="guide-text"><strong>Kampf verloren?</strong> Kein Problem — trinke ein Bier, um dich zu heilen, und fordere deinen Gegner erneut heraus. Du kannst so oft antreten, wie du möchtest.</div>
       <div class="guide-text"><strong>Quest nicht geschafft?</strong> Warte 5 Minuten, dann darfst du es erneut versuchen.</div>
       <div class="guide-text">Lord Patten ist dazu bestimmt zu gewinnen — es ist nur eine Frage der Zeit!</div>
