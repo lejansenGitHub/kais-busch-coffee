@@ -1,4 +1,4 @@
-/* empty css              *//* empty css                    */import{S as u,a as h,I as c}from"./hero-data-B8v1JvdX.js";const m={ingrid:{name:"Ingrid",title:"Die Hüterin der Vorratskammer",portrait:"🧔‍♀️",intro:"Eine alte Frau mit langem Gedächtnis und einer gut bestückten Küche. Sie spricht von der Vergangenheit mit einer Mischung aus Zuneigung und Verzweiflung.",quests:[{title:"Das Eis der Versöhnung",task:`Vor vielen Jahren haben sich junge Männer regelmäßig Joghurts mit Perlen aus meinem Kühlschrank und Aldi-Baguettes mit Salami aus unserem Vorrat genommen. Um Frieden mit der Vergangenheit zu schließen, brauche ich einen jungen Mann wie dich, der mir mein Lieblingseis bringt. Kannst du das Rätsel lösen, um die richtige Sorte herauszufinden?
+/* empty css              *//* empty css                    */import{S as h,a as c,b as o,I as m}from"./hero-data-B8v1JvdX.js";const g={ingrid:{name:"Ingrid",title:"Die Hüterin der Vorratskammer",portrait:"🧔‍♀️",intro:"Eine alte Frau mit langem Gedächtnis und einer gut bestückten Küche. Sie spricht von der Vergangenheit mit einer Mischung aus Zuneigung und Verzweiflung.",quests:[{title:"Das Eis der Versöhnung",task:`Vor vielen Jahren haben sich junge Männer regelmäßig Joghurts mit Perlen aus meinem Kühlschrank und Aldi-Baguettes mit Salami aus unserem Vorrat genommen. Um Frieden mit der Vergangenheit zu schließen, brauche ich einen jungen Mann wie dich, der mir mein Lieblingseis bringt. Kannst du das Rätsel lösen, um die richtige Sorte herauszufinden?
 
 <em>Ich wachse in einer Schale am Baum,
 Eichhörnchen horten mich — man glaubt es kaum.
@@ -33,48 +33,48 @@ Mindestens 3 von 5 Runden müssen korrekt nachgeklatscht werden.
 
 Lennart nickt zufrieden: „Ein Anführer, der seine Leute hungern lässt, verdient keine Treue. Aber einer, der sein Gold für das Wohl der Gruppe einsetzt — dem folgt man bis ans Ende der Welt."`,criteria:["Das Gold aus Mirkos Goldbeutel wurde zum Kauf von Essen verwendet","Alle anwesenden Gefährten wurden versorgt"],rewards:[{type:"skill",id:"oath_of_loyalty"}]}]},"hubi-quest":{name:"Hubi",title:"Die Barriere am Schelmenturm",portrait:"🎶",intro:'Vor dem Schelmenturm flimmert eine unsichtbare Wand in der Luft. Wer hindurchzugehen versucht, wird zurückgestoßen. Lennart runzelt die Stirn: „Magisch. Aber nicht unüberwindbar — ich spüre, dass Musik der Schlüssel ist. Hast du etwas, womit man spielen könnte?"',quests:[{title:"Die Melodie der Barriere",task:`Lord Patten muss die Flöte (von Hubi erhalten) zusammen mit dem Notenblatt (von Martina erhalten) verwenden, um eine Melodie zu spielen. Der Spieler spielt auf der Flöte die Noten nach, die auf dem Notenblatt stehen.
 
-Achtung: Die Musik durchbricht die Barriere, aber sie hat auch eine unerwartete Wirkung — Hubi wird von der Melodie verzaubert und verliert den Verstand. Er stellt sich Lord Patten als Mid-Boss in den Weg.`,criteria:["Die Flöte und das Notenblatt wurden kombiniert und eine Melodie gespielt","Die Barriere am Schelmenturm wurde durchbrochen"],rewards:[{type:"quest_item",name:"Barriere durchbrochen"}]}]},father:{name:"Der Vater",title:"Der Bierkenner",portrait:"🍺",intro:"Manche nennen ihn Kalle. Andere kennen ihn als Karl-Heinz. Aber eines weiß jeder: Er kennt sein Bier. In seiner Gilde wird nicht nach Namen gefragt — sondern nach Geschmack.",quests:[{title:"Die Bierverkostung",task:'Der Vater stellt dir zwei Gläser Bier hin — eines Kölsch, eines Alt. Du trinkst mit geschlossenen Augen und musst erkennen, welches welches ist. Das Ganze geht über 3 Runden mit frischen Gläsern. Du musst alle 3 Runden richtig erraten, um zu bestehen. „Wer sein Bier nicht kennt, kennt sich selbst nicht."',criteria:["In allen 3 Runden wurde Kölsch und Alt korrekt erkannt (mit geschlossenen Augen)"],rewards:[{type:"item",id:"drinking_horn"}]}]}},a=document.querySelector("#app"),o=a.dataset.character,n=m[o];n?a.innerHTML=`
+Achtung: Die Musik durchbricht die Barriere, aber sie hat auch eine unerwartete Wirkung — Hubi wird von der Melodie verzaubert und verliert den Verstand. Er stellt sich Lord Patten als Mid-Boss in den Weg.`,criteria:["Die Flöte und das Notenblatt wurden kombiniert und eine Melodie gespielt","Die Barriere am Schelmenturm wurde durchbrochen"],rewards:[{type:"quest_item",name:"Barriere durchbrochen"}]}]},father:{name:"Der Vater",title:"Der Bierkenner",portrait:"🍺",intro:"Manche nennen ihn Kalle. Andere kennen ihn als Karl-Heinz. Aber eines weiß jeder: Er kennt sein Bier. In seiner Gilde wird nicht nach Namen gefragt — sondern nach Geschmack.",quests:[{title:"Die Bierverkostung",task:'Der Vater stellt dir zwei Gläser Bier hin — eines Kölsch, eines Alt. Du trinkst mit geschlossenen Augen und musst erkennen, welches welches ist. Das Ganze geht über 3 Runden mit frischen Gläsern. Du musst alle 3 Runden richtig erraten, um zu bestehen. „Wer sein Bier nicht kennt, kennt sich selbst nicht."',criteria:["In allen 3 Runden wurde Kölsch und Alt korrekt erkannt (mit geschlossenen Augen)"],rewards:[{type:"item",id:"drinking_horn"}]}]}},u=document.querySelector("#app"),k=u.dataset.character,r=g[k];r?(u.innerHTML=`
     <div class="character-card">
       <div class="card-header">
-        <div class="character-name">${n.name}</div>
+        <div class="character-name">${r.name}</div>
       </div>
 
       <div class="quest-intro">
-        <div class="quest-portrait">${n.portrait}</div>
+        <div class="quest-portrait">${r.portrait}</div>
         <div class="quest-intro-text">
-          <div class="quest-title-line">${n.title}</div>
-          <p>${n.intro}</p>
+          <div class="quest-title-line">${r.title}</div>
+          <p>${r.intro}</p>
         </div>
       </div>
 
-      ${n.quests.map((t,d)=>`
+      ${r.quests.map((n,l)=>`
         <div class="quest-block">
-          <div class="quest-number">Quest ${d+1}</div>
-          <div class="quest-name">${t.title}</div>
+          <div class="quest-number">Quest ${l+1}</div>
+          <div class="quest-name">${n.title}</div>
 
           <div class="quest-section">
             <div class="quest-section-label">Aufgabe</div>
-            <p class="quest-text">${t.task}</p>
+            <p class="quest-text">${n.task}</p>
           </div>
 
           <div class="quest-section">
             <div class="quest-section-label">Abnahmekriterien</div>
             <ul class="quest-criteria">
-              ${t.criteria.map(e=>`<li>${e}</li>`).join("")}
+              ${n.criteria.map(e=>`<li>${e}</li>`).join("")}
             </ul>
           </div>
 
           <div class="quest-section">
             <div class="quest-section-label">Belohnungen</div>
             <div class="quest-rewards">
-              ${t.rewards.map(e=>{let r,i,s;return e.type==="skill"?(r=u[e.id].name,i=h[e.id],s="S"):e.type==="item"?(r=e.id.replace(/_/g," ").replace(/\b\w/g,l=>l.toUpperCase()),i=c[e.id],s="I"):(r=e.name,i=null,s="Q"),`
+              ${n.rewards.map(e=>{let t,s,d,a;if(e.type==="skill"){const i=h[e.id];t=i.name,a=i.desc,s=c[e.id],d="S"}else if(e.type==="item"){const i=o[e.id];t=i?i.name:e.id,a=i?i.desc:"",s=m[e.id],d="I"}else t=e.name,a=null,s=null,d="Q";return`
                 <div class="reward-row">
-                  <span class="reward-type ${e.type}">${s}</span>
-                  <span class="reward-name">${r}</span>
-                  ${i?`<span class="reward-code">${i}</span>`:""}
+                  <span class="reward-type ${e.type}">${d}</span>
+                  ${a?`<span class="reward-name has-tooltip" tabindex="0">${t}<span class="tooltip">${a}</span></span>`:`<span class="reward-name">${t}</span>`}
+                  ${s?`<span class="reward-code">${s}</span>`:""}
                 </div>`}).join("")}
             </div>
           </div>
         </div>
       `).join("")}
-    </div>`:a.innerHTML="<p>Unbekannter Quest-Charakter.</p>";
+    </div>`,document.querySelectorAll(".has-tooltip").forEach(n=>{n.addEventListener("click",l=>{l.stopPropagation();const e=n.classList.contains("tooltip-active");document.querySelectorAll(".tooltip-active").forEach(t=>t.classList.remove("tooltip-active")),e||n.classList.add("tooltip-active")})}),document.addEventListener("click",()=>{document.querySelectorAll(".tooltip-active").forEach(n=>n.classList.remove("tooltip-active"))})):u.innerHTML="<p>Unbekannter Quest-Charakter.</p>";

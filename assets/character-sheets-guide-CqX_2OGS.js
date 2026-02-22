@@ -402,9 +402,9 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const A
         <svg viewBox="0 0 380 220" xmlns="http://www.w3.org/2000/svg">
           <rect width="380" height="220" fill="#0a0804"/>
           <circle cx="290" cy="14" r="5" fill="none" stroke="#c9aa71" stroke-width="1.5"/>
-          <text x="300" y="18" fill="#c9aa71" font-size="9" font-family="Georgia, serif">= Du</text>
-          <circle cx="335" cy="14" r="5" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
-          <text x="345" y="18" fill="#e74c3c" font-size="9" font-family="Georgia, serif">= Gegner</text>
+          <text x="265" y="18" fill="#c9aa71" font-size="9" font-family="Georgia, serif">= Du</text>
+          <circle cx="300" cy="14" r="5" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
+          <text x="310" y="18" fill="#e74c3c" font-size="9" font-family="Georgia, serif">= Gegner</text>
           <text x="190" y="18" text-anchor="middle" fill="#7a6a4a" font-size="11" font-weight="bold" font-family="Georgia, serif" letter-spacing="2">AUFSTELLUNG</text>
           <line x1="20" y1="175" x2="360" y2="175" stroke="#2a2010" stroke-width="1"/>
           <line x1="110" y1="145" x2="110" y2="185" stroke="#c9aa71" stroke-width="2" stroke-dasharray="5,3"/>
@@ -449,9 +449,9 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const A
         <svg viewBox="0 0 380 200" xmlns="http://www.w3.org/2000/svg">
           <rect width="380" height="200" fill="#0a0804"/>
           <circle cx="290" cy="14" r="5" fill="none" stroke="#c9aa71" stroke-width="1.5"/>
-          <text x="300" y="18" fill="#c9aa71" font-size="9" font-family="Georgia, serif">= Du</text>
-          <circle cx="335" cy="14" r="5" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
-          <text x="345" y="18" fill="#e74c3c" font-size="9" font-family="Georgia, serif">= Gegner</text>
+          <text x="265" y="18" fill="#c9aa71" font-size="9" font-family="Georgia, serif">= Du</text>
+          <circle cx="300" cy="14" r="5" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
+          <text x="310" y="18" fill="#e74c3c" font-size="9" font-family="Georgia, serif">= Gegner</text>
           <text x="190" y="22" text-anchor="middle" fill="#7a6a4a" font-size="11" font-weight="bold" font-family="Georgia, serif" letter-spacing="2">WÜRFELN</text>
           <circle cx="70" cy="110" r="10" fill="none" stroke="#c9aa71" stroke-width="2"/>
           <line x1="70" y1="120" x2="70" y2="150" stroke="#c9aa71" stroke-width="2"/>
@@ -493,9 +493,9 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const A
         <svg viewBox="0 0 380 200" xmlns="http://www.w3.org/2000/svg">
           <rect width="380" height="200" fill="#0a0804"/>
           <circle cx="290" cy="14" r="5" fill="none" stroke="#c9aa71" stroke-width="1.5"/>
-          <text x="300" y="18" fill="#c9aa71" font-size="9" font-family="Georgia, serif">= Du</text>
-          <circle cx="335" cy="14" r="5" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
-          <text x="345" y="18" fill="#e74c3c" font-size="9" font-family="Georgia, serif">= Gegner</text>
+          <text x="265" y="18" fill="#c9aa71" font-size="9" font-family="Georgia, serif">= Du</text>
+          <circle cx="300" cy="14" r="5" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
+          <text x="310" y="18" fill="#e74c3c" font-size="9" font-family="Georgia, serif">= Gegner</text>
           <text x="190" y="22" text-anchor="middle" fill="#7a6a4a" font-size="11" font-weight="bold" font-family="Georgia, serif" letter-spacing="2">SANDSACK WERFEN</text>
           <line x1="20" y1="170" x2="360" y2="170" stroke="#2a2010" stroke-width="1"/>
           <line x1="95" y1="145" x2="95" y2="178" stroke="#c9aa71" stroke-width="1.5" stroke-dasharray="4,3"/>
@@ -523,9 +523,9 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const A
         <svg viewBox="0 0 380 230" xmlns="http://www.w3.org/2000/svg">
           <rect width="380" height="230" fill="#0a0804"/>
           <circle cx="290" cy="14" r="5" fill="none" stroke="#c9aa71" stroke-width="1.5"/>
-          <text x="300" y="18" fill="#c9aa71" font-size="9" font-family="Georgia, serif">= Du</text>
-          <circle cx="335" cy="14" r="5" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
-          <text x="345" y="18" fill="#e74c3c" font-size="9" font-family="Georgia, serif">= Gegner</text>
+          <text x="265" y="18" fill="#c9aa71" font-size="9" font-family="Georgia, serif">= Du</text>
+          <circle cx="300" cy="14" r="5" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
+          <text x="310" y="18" fill="#e74c3c" font-size="9" font-family="Georgia, serif">= Gegner</text>
           <text x="190" y="22" text-anchor="middle" fill="#e74c3c" font-size="12" font-weight="bold" font-family="Georgia, serif" letter-spacing="2">TREFFER!</text>
           <circle cx="130" cy="105" r="55" fill="#0f0d08" stroke="#27ae60" stroke-width="2.5"/>
           <circle cx="130" cy="105" r="35" fill="#151008" stroke="#f39c12" stroke-width="2.5"/>
@@ -566,9 +566,9 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const A
         <svg viewBox="0 0 380 240" xmlns="http://www.w3.org/2000/svg">
           <rect width="380" height="240" fill="#0a0804"/>
           <circle cx="290" cy="14" r="5" fill="none" stroke="#c9aa71" stroke-width="1.5"/>
-          <text x="300" y="18" fill="#c9aa71" font-size="9" font-family="Georgia, serif">= Du</text>
-          <circle cx="335" cy="14" r="5" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
-          <text x="345" y="18" fill="#e74c3c" font-size="9" font-family="Georgia, serif">= Gegner</text>
+          <text x="265" y="18" fill="#c9aa71" font-size="9" font-family="Georgia, serif">= Du</text>
+          <circle cx="300" cy="14" r="5" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
+          <text x="310" y="18" fill="#e74c3c" font-size="9" font-family="Georgia, serif">= Gegner</text>
           <text x="190" y="22" text-anchor="middle" fill="#7a6a4a" font-size="11" font-weight="bold" font-family="Georgia, serif" letter-spacing="2">SKILL EINSETZEN</text>
           <g transform="translate(90, 55)">
             <circle cx="0" cy="25" r="48" fill="none" stroke="#c9aa71" stroke-width="1" opacity="0.2"/>
@@ -622,9 +622,9 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const A
         <svg viewBox="0 0 380 200" xmlns="http://www.w3.org/2000/svg">
           <rect width="380" height="200" fill="#0a0804"/>
           <circle cx="290" cy="14" r="5" fill="none" stroke="#c9aa71" stroke-width="1.5"/>
-          <text x="300" y="18" fill="#c9aa71" font-size="9" font-family="Georgia, serif">= Du</text>
-          <circle cx="335" cy="14" r="5" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
-          <text x="345" y="18" fill="#e74c3c" font-size="9" font-family="Georgia, serif">= Gegner</text>
+          <text x="265" y="18" fill="#c9aa71" font-size="9" font-family="Georgia, serif">= Du</text>
+          <circle cx="300" cy="14" r="5" fill="none" stroke="#e74c3c" stroke-width="1.5"/>
+          <text x="310" y="18" fill="#e74c3c" font-size="9" font-family="Georgia, serif">= Gegner</text>
           <text x="190" y="24" text-anchor="middle" fill="#c9aa71" font-size="16" font-weight="bold" font-family="Georgia, serif" letter-spacing="3">SIEG!</text>
           <text x="140" y="20" fill="#f39c12" font-size="10">✦</text>
           <text x="235" y="18" fill="#f39c12" font-size="8">✦</text>
@@ -886,10 +886,10 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const A
       <div class="skill-example">
         <div class="skill-ex-header">
           <div class="skill-ex-badge passive">P</div>
-          <div class="skill-ex-name">Gold Reserve</div>
+          <div class="skill-ex-name">Fortress</div>
         </div>
-        <div class="skill-ex-desc">Außenkreis-Treffer des Gegners verursachen <strong>keinen Schaden</strong>.</div>
-        <div class="skill-ex-scenario">💡 Szenario: Dein Gegner trifft den Außenkreis? Pech gehabt — 0 Schaden. Er muss mindestens den Mittelkreis treffen, um dir wehzutun. Das macht dich extrem widerstandsfähig.</div>
+        <div class="skill-ex-desc">Außenkreis-Treffer des Gegners verursachen <strong>3 Schaden weniger</strong>.</div>
+        <div class="skill-ex-scenario">💡 Szenario: Dein Gegner trifft den Außenkreis? Fortress reduziert den Schaden um 3! Bei schwachen Gegnern kann das den Treffer fast wertlos machen.</div>
       </div>
 
       <div class="skill-example">
