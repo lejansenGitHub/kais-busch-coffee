@@ -9,9 +9,7 @@ export const SKILLS = {
   freeze:        { name: 'Freeze',        type: 'A', desc: 'Gegner muss den Wurfarm vollständig gestreckt halten',      maxUses: 1, duration: 2 },
   crude_sack:    { name: 'Crude Sack',    type: 'A', desc: 'Gegner muss mit dem Sandsack schlechter Qualität werfen',              maxUses: 1, duration: 2 },
   tremor:        { name: 'Tremor',        type: 'A', desc: 'Gegner muss auf einem Bein stehend werfen',                 maxUses: 1, duration: 2 },
-  shake:         { name: 'Shake',         type: 'A', desc: 'Du darfst deinen Gegner beim Werfen maßvoll schütteln', maxUses: 1, duration: 2 },
   vertigo:       { name: 'Vertigo',       type: 'A', desc: 'Gegner muss sich vor jedem Wurf 3-mal drehen',           maxUses: 1, duration: 2 },
-  weighted_sack: { name: 'Weighted Sack', type: 'A', desc: 'Gegner muss den Sandsack beim Werfen auf dem Handrücken balancieren', maxUses: 1, duration: 2 },
   revision:      { name: 'Revision',      type: 'A', desc: 'Nach einem Treffer einen Teil der Zielscheibe mit Kreide übermalen \u2014 der Treffer zählt als Fehlwurf', maxUses: 3 },
 
   // Active — self buffs
@@ -23,11 +21,9 @@ export const SKILLS = {
 
   // Passive — self
   double_attack_passive: { name: 'Double Attack', type: 'P', desc: 'Du wirfst immer mit beiden Armen gleichzeitig mit zwei Sandsäcken', maxUses: 0 },
-  sturdy_arm:    { name: 'Sturdy Arm',    type: 'P', desc: 'Du wirfst immer mit dem Sandsack hoher Qualität',            maxUses: 0 },
-  worn_grip:     { name: 'Worn Grip',     type: 'P', desc: 'Du wirfst immer mit dem Sandsack niedriger Qualität',             maxUses: 0 },
   titans_grip:   { name: "Titan's Grip",  type: 'P', desc: 'Deine Innentreffer verursachen +2 Bonusschaden',               maxUses: 0 },
   last_stand:    { name: 'Last Stand',    type: 'P', desc: 'Unter 10 HP verursachen alle deine Treffer +2 Schaden',            maxUses: 0 },
-  fortress:      { name: 'Fortress',      type: 'P', desc: 'Außenkreis-Treffer des Gegners verursachen keinen Schaden',             maxUses: 0 },
+  fortress:      { name: 'Fortress',      type: 'P', desc: 'Außenkreis-Treffer des Gegners verursachen 3 Schaden weniger',             maxUses: 0 },
 
   silver_tongue: { name: 'Silver Tongue', type: 'P', desc: 'Du darfst während der gegnerischen Würfe frei reden, um abzulenken', maxUses: 0 },
   insight:       { name: 'Insight',       type: 'P', desc: 'Gegner muss vor dem Kampf seine Skills zeigen \u2014 du darfst 1 Einsatz eines aktiven Skills ohne Effekt abziehen', maxUses: 0 },
@@ -38,7 +34,6 @@ export const SKILLS = {
   dark_deal:      { name: 'Dark Deal',      type: 'A', desc: 'Zwinge den Gegner zu wählen: einen Wurf auslassen oder 3 Bonusschaden nehmen',     maxUses: 1 },
 
   // Passive — self (continued)
-  gold_reserve:  { name: 'Gold Reserve',  type: 'P', desc: 'Außenkreis-Treffer des Gegners verursachen keinen Schaden',                        maxUses: 0 },
   evasion:       { name: 'Evasion',       type: 'P', desc: 'Du darfst einmal pro Runde einem Treffer ausweichen',                                      maxUses: 0 },
   many_faces:    { name: 'Many Faces',    type: 'P', desc: 'Der Gegner kennt deine Skills erst, wenn du sie einsetzt \u2014 immun gegen Insight', maxUses: 0 },
 
@@ -50,7 +45,7 @@ export const SKILLS = {
   sugar_rush:      { name: 'Zuckerschock',    type: 'A', desc: 'Gib dem Gegner etwas Süßes \u2014 nächster Wurf +2 Schaden, danach 2 Würfe \u22123 Schaden', maxUses: 2 },
   high_standards:  { name: 'Hoher Anspruch',  type: 'A', desc: 'Mitte/Innen +2 Schaden, Außenkreis zählt als Fehlwurf. Kostet keine extra Aktion', maxUses: 2 },
 
-  // Passive — enemy
-  intimidate:    { name: 'Intimidate',    type: 'P', desc: 'Dein Gegner wirft immer mit dem Sandsack niedriger Qualität',     maxUses: 0 },
-  inspire:       { name: 'Inspire',       type: 'P', desc: 'Dein Gegner wirft immer mit dem Sandsack hoher Qualität',    maxUses: 0 },
+  // Passive — loyalty
+  oath_of_loyalty: { name: 'Treueschwur', type: 'P', desc: 'Dein gewählter Verbündeter darf seine Fähigkeit zweimal einsetzen statt einmal', maxUses: 0 },
+
 };

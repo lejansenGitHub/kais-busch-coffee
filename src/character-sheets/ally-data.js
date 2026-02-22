@@ -10,10 +10,10 @@ export const ALLIES = [
   {
     name: 'Nick',
     title: 'Der Schurke',
-    timing: 'TBD',
-    ability: 'TBD',
-    desc: 'Noch offen.',
-    mechanic: 'tbd',
+    timing: '2× im gesamten Spiel',
+    ability: 'Schattenwurf',
+    desc: 'Nick wirft unangekündigt einen Sandsack auf das Ziel \u2014 weder Sascha noch der Gegner dürfen es vorher wissen. Nick entscheidet selbst, wann er zuschlägt. Trifft er, zählt der Treffer als Bonusschaden gegen den Gegner (Außen 1, Mitte 3, Innen 5). Darf insgesamt nur zweimal während des gesamten Spiels eingesetzt werden.',
+    mechanic: 'physical',
   },
   {
     name: 'Jess',

@@ -151,6 +151,25 @@ const QUESTS = {
       },
     ],
   },
+  essen: {
+    name: 'Lennart',
+    title: 'Die Speisung der Gefährten',
+    portrait: '\u{1F372}',
+    intro: 'Die Gruppe hat lange gekämpft und der Hunger macht sich bemerkbar. Lennart tritt vor und blickt Lord Patten ernst an: „Ihr habt Mirkos Goldbeutel gewonnen — schwer verdientes Gold. Doch ein wahrer Anführer kämpft nicht nur mit dem Schwert. Er sorgt für seine Leute. Eure Gefährten brauchen Nahrung, und die Altstadt bietet genug. Nutzt das Gold weise."',
+    quests: [
+      {
+        title: 'Das Festmahl',
+        task: 'Lord Patten hat Mirkos Goldbeutel erbeutet. Bevor der Kampf am Schelmenturm beginnt, muss die Gruppe gestärkt werden. Kaufe mit dem Gold Essen für alle Gefährten in der Altstadt.\n\nLennart nickt zufrieden: „Ein Anführer, der seine Leute hungern lässt, verdient keine Treue. Aber einer, der sein Gold für das Wohl der Gruppe einsetzt — dem folgt man bis ans Ende der Welt."',
+        criteria: [
+          'Das Gold aus Mirkos Goldbeutel wurde zum Kauf von Essen verwendet',
+          'Alle anwesenden Gefährten wurden versorgt',
+        ],
+        rewards: [
+          { type: 'skill', id: 'oath_of_loyalty' },
+        ],
+      },
+    ],
+  },
   'hubi-quest': {
     name: 'Hubi',
     title: 'Die Barriere am Schelmenturm',

@@ -13,5 +13,8 @@ export default {
     onStrike: '„Nimm das!"',
     onDefeat: 'Hubi schüttelt den Kopf, als würde er aus einem Traum erwachen. Dabei fällt ihm die Flöte aus der Tasche und klirrt auf das Kopfsteinpflaster. „Die hatte ich die ganze Zeit bei mir... keine Ahnung woher."',
   },
-  reward: { skill: 'advance' },
+  rewards: [
+    { skill: 'advance' },
+    { quest_item: 'Flöte' },
+  ],
 };

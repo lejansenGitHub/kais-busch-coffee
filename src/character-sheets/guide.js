@@ -340,6 +340,40 @@ style.textContent = `
     margin-bottom: 6px;
     margin-top: 12px;
   }
+  .illust-panel { cursor: zoom-in; }
+
+  /* Fullscreen zoom overlay */
+  .zoom-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.92);
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  .zoom-overlay.visible { display: flex; align-items: center; justify-content: center; }
+  .zoom-overlay svg {
+    max-width: 100vw;
+    max-height: 100vh;
+    transform-origin: 0 0;
+  }
+  .zoom-close {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    z-index: 10000;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+  }
 `;
 document.head.appendChild(style);
 
@@ -870,9 +904,25 @@ app.innerHTML = `
 
     <hr class="guide-divider">
 
+    <!-- ALLIES -->
+    <div class="guide-section">
+      <div class="section-title">7. Verb\u00fcndete</div>
+      <div class="guide-text">Im Laufe des Abenteuers schlie\u00dfen sich Lord Patten <strong>Verb\u00fcndete</strong> an. Jeder Verb\u00fcndete hat eine <strong>einzigartige F\u00e4higkeit</strong>, mit der er im Kampf helfen kann.</div>
+
+      <div class="guide-text"><strong>Regeln:</strong></div>
+      <div class="guide-text">\u2022 Pro Kampf darf Sascha <strong>einen Verb\u00fcndeten</strong> ausw\u00e4hlen, der mit seiner F\u00e4higkeit hilft.</div>
+      <div class="guide-text">\u2022 Sascha muss dies <strong>bei Kampfbeginn aktiv festlegen</strong> \u2014 vor dem ersten Wurf. Wenn er es vergisst oder nicht nutzt: <strong>Pech gehabt.</strong></div>
+      <div class="guide-text">\u2022 Pro Kampf kann nur <strong>ein</strong> Verb\u00fcndeter helfen, nicht mehrere.</div>
+
+      <div class="section-subtitle">Ausnahme: Nick</div>
+      <div class="guide-text">Nick ist ein Schurke \u2014 er handelt <strong>auf eigene Faust</strong>. Er muss nicht von Sascha angefordert werden und z\u00e4hlt nicht als gew\u00e4hlter Verb\u00fcndeter. Nick darf seinen <strong>Schattenwurf</strong> jederzeit einsetzen (2\u00d7 im gesamten Spiel), auch zus\u00e4tzlich zu einem anderen Verb\u00fcndeten.</div>
+    </div>
+
+    <hr class="guide-divider">
+
     <!-- DAMAGE & HP -->
     <div class="guide-section">
-      <div class="section-title">7. Schaden & HP</div>
+      <div class="section-title">8. Schaden & HP</div>
       <div class="guide-text">Jeder Charakter hat einen <strong>Schadenswert pro Zone</strong>, der auf seiner Karte steht. Beispiel f\u00fcr einen Level-1-Charakter:</div>
 
       <div class="target-labels">
@@ -901,7 +951,7 @@ app.innerHTML = `
 
     <!-- LEVEL UP & REWARDS -->
     <div class="guide-section">
-      <div class="section-title">8. Belohnungen & Level Up</div>
+      <div class="section-title">9. Belohnungen & Level Up</div>
       <div class="guide-text">Nach jedem besiegten Gegner erh\u00e4ltst du einen <strong>Belohnungs-Code</strong>. Diesen gibst du auf Lord Pattens Charakterseite ein, um einen neuen Skill oder ein Item freizuschalten.</div>
       <div class="guide-text">Zus\u00e4tzlich kannst du nach jedem Kampf ein <strong>Level Up</strong> machen und w\u00e4hlen: Mehr HP, mehr Schaden im Au\u00dfen-/Mittel-/Innenkreis. Alle 5 Level bekommst du +1 Aktion und +1 Skill-Slot.</div>
       <div class="guide-text">Auch <strong>Quests</strong> (Aufgaben von NPCs) belohnen dich mit Skills oder Items. Die Quest-Seite zeigt die Aufgabe, die Kriterien und den Code.</div>
@@ -909,9 +959,19 @@ app.innerHTML = `
 
     <hr class="guide-divider">
 
+    <!-- QUEST-NPCs -->
+    <div class="guide-section">
+      <div class="section-title">10. Quest-NPCs erkennen</div>
+      <div class="guide-text">Nicht alle Begegnungen sind K\u00e4mpfe \u2014 manche Personen bieten <strong>Quests</strong> an. Du erkennst Quest-NPCs daran, dass sie ein <strong>Schild mit einem gro\u00dfen \u201e!\u201c</strong> hochhalten.</div>
+      <div class="guide-text">Wenn du ein \u201e!\u201c siehst, geh auf die Person zu und h\u00f6re dir ihre Aufgabe an. Nach Abschluss der Quest erh\u00e4ltst du einen Belohnungs-Code.</div>
+      <div class="guide-text"><strong>Tipp:</strong> Halte die Augen offen \u2014 Quests belohnen dich oft mit m\u00e4chtigen Skills oder seltenen Items, die dir im n\u00e4chsten Kampf den Vorteil verschaffen.</div>
+    </div>
+
+    <hr class="guide-divider">
+
     <!-- RETRY -->
     <div class="guide-section">
-      <div class="section-title">9. Niederlagen & Wiederholung</div>
+      <div class="section-title">11. Niederlagen & Wiederholung</div>
       <div class="guide-text"><strong>Kampf verloren?</strong> Kein Problem \u2014 trinke ein Bier, um dich zu heilen, und fordere deinen Gegner erneut heraus. Du kannst so oft antreten, wie du m\u00f6chtest.</div>
       <div class="guide-text"><strong>Quest nicht geschafft?</strong> Warte 5 Minuten, dann darfst du es erneut versuchen.</div>
       <div class="guide-text">Lord Patten ist dazu bestimmt zu gewinnen \u2014 es ist nur eine Frage der Zeit!</div>
@@ -919,3 +979,124 @@ app.innerHTML = `
 
   </div>
 `;
+
+// --- Zoomable illustrations ---
+const overlay = document.createElement('div');
+overlay.className = 'zoom-overlay';
+overlay.innerHTML = '<button class="zoom-close">\u00d7</button><div class="zoom-content"></div>';
+document.body.appendChild(overlay);
+
+const zoomContent = overlay.querySelector('.zoom-content');
+let zScale = 1, zTX = 0, zTY = 0, zSvg = null;
+
+function zApply() {
+  if (!zSvg) return;
+  const ow = overlay.clientWidth, oh = overlay.clientHeight;
+  const vb = zSvg.viewBox.baseVal;
+  const aspect = vb.width / vb.height;
+  const fitW = ow, fitH = ow / aspect;
+  const sw = fitW * zScale, sh = fitH * zScale;
+  const minX = Math.min(0, ow - sw), minY = Math.min(0, oh - sh);
+  zTX = Math.max(minX, Math.min(0, zTX));
+  zTY = Math.max(minY, Math.min(0, zTY));
+  zSvg.style.width = sw + 'px';
+  zSvg.style.height = sh + 'px';
+  zSvg.style.transform = `translate(${zTX}px, ${zTY}px)`;
+}
+
+function zOpen(svgEl) {
+  const clone = svgEl.cloneNode(true);
+  clone.removeAttribute('width');
+  clone.removeAttribute('height');
+  clone.style.width = '100%';
+  clone.style.height = 'auto';
+  clone.style.maxWidth = '100vw';
+  clone.style.maxHeight = '100vh';
+  zoomContent.innerHTML = '';
+  zoomContent.appendChild(clone);
+  zSvg = clone;
+  zScale = 1; zTX = 0; zTY = 0;
+  zApply();
+  overlay.classList.add('visible');
+}
+
+function zClose() {
+  overlay.classList.remove('visible');
+  zSvg = null;
+}
+
+overlay.querySelector('.zoom-close').addEventListener('click', zClose);
+overlay.addEventListener('click', (e) => { if (e.target === overlay) zClose(); });
+
+// Pinch zoom + pan on overlay
+let zt0 = null, zStartScale = 1, zStartTX = 0, zStartTY = 0;
+
+overlay.addEventListener('touchstart', (e) => {
+  if (!zSvg) return;
+  if (e.touches.length === 2) {
+    e.preventDefault();
+    zt0 = Array.from(e.touches).map(t => ({ x: t.clientX, y: t.clientY }));
+    zStartScale = zScale; zStartTX = zTX; zStartTY = zTY;
+  } else if (e.touches.length === 1 && zScale > 1) {
+    e.preventDefault();
+    zt0 = [{ x: e.touches[0].clientX, y: e.touches[0].clientY }];
+    zStartTX = zTX; zStartTY = zTY;
+  }
+}, { passive: false });
+
+overlay.addEventListener('touchmove', (e) => {
+  if (!zt0 || !zSvg) return;
+  e.preventDefault();
+  if (e.touches.length === 2 && zt0.length === 2) {
+    const cur = Array.from(e.touches).map(t => ({ x: t.clientX, y: t.clientY }));
+    const d0 = Math.hypot(zt0[1].x - zt0[0].x, zt0[1].y - zt0[0].y);
+    const d1 = Math.hypot(cur[1].x - cur[0].x, cur[1].y - cur[0].y);
+    const ns = Math.max(1, Math.min(6, zStartScale * (d1 / d0)));
+    const cx0 = (zt0[0].x + zt0[1].x) / 2, cy0 = (zt0[0].y + zt0[1].y) / 2;
+    const mcx = (cur[0].x + cur[1].x) / 2, mcy = (cur[0].y + cur[1].y) / 2;
+    const ratio = ns / zStartScale;
+    zTX = zStartTX + (mcx - cx0) + cx0 * (1 - ratio);
+    zTY = zStartTY + (mcy - cy0) + cy0 * (1 - ratio);
+    zScale = ns;
+    zApply();
+  } else if (e.touches.length === 1 && zt0.length === 1) {
+    zTX = zStartTX + (e.touches[0].clientX - zt0[0].x);
+    zTY = zStartTY + (e.touches[0].clientY - zt0[0].y);
+    zApply();
+  }
+}, { passive: false });
+
+overlay.addEventListener('touchend', () => { zt0 = null; });
+
+// Double-tap to zoom in/reset
+let lastTap = 0;
+overlay.addEventListener('touchend', (e) => {
+  if (e.touches.length > 0) return;
+  const now = Date.now();
+  if (now - lastTap < 300) {
+    if (zScale > 1.5) { zScale = 1; zTX = 0; zTY = 0; }
+    else { zScale = 3; zTX = -(overlay.clientWidth); zTY = -(overlay.clientHeight); }
+    zApply();
+  }
+  lastTap = now;
+});
+
+// Mouse wheel zoom
+overlay.addEventListener('wheel', (e) => {
+  if (!zSvg) return;
+  e.preventDefault();
+  const factor = e.deltaY < 0 ? 1.2 : 1 / 1.2;
+  const ns = Math.max(1, Math.min(6, zScale * factor));
+  const ratio = ns / zScale;
+  const cx = e.clientX, cy = e.clientY;
+  zTX = cx - ratio * (cx - zTX);
+  zTY = cy - ratio * (cy - zTY);
+  zScale = ns;
+  zApply();
+}, { passive: false });
+
+// Click panels to open
+document.querySelectorAll('.illust-panel').forEach(panel => {
+  const svg = panel.querySelector('svg');
+  if (svg) panel.addEventListener('click', () => zOpen(svg));
+});

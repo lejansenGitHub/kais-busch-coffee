@@ -1,11 +1,11 @@
 export default {
   id: 'katta',
   name: 'Katta',
-  level: 5,
-  actions: 1,
-  maxHp: 30,
-  currentHp: 30,
-  damage: { outer: 2, middle: 8, inner: 13 },
+  level: 12,
+  actions: 3,
+  maxHp: 58,
+  currentHp: 58,
+  damage: { outer: 2, middle: 5, inner: 8 },
   skills: ['sugar_rush', 'high_standards'],
   story: {
     desc: 'Eine Meisterin des Genusses mit unfehlbarem Gaumen. Katta kämpft wie sie kocht \u2014 elegant, präzise und mit einer Prise Arroganz. Sie akzeptiert nur Perfektion.',

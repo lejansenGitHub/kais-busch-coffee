@@ -588,9 +588,13 @@ function render(levelUpSummary) {
 
       const summary = [choice.label];
       if (isBonusLevel) {
-        state.actions += 1;
         state.maxSkillSlots += 1;
-        summary.push('+1 Aktion, +1 Skill-Slot');
+        if (state.actions < 3) {
+          state.actions += 1;
+          summary.push('+1 Aktion, +1 Skill-Slot');
+        } else {
+          summary.push('+1 Skill-Slot');
+        }
       }
       if (nextLevel % 2 === 0) {
         summary.push(`Heilen steigt auf +${healAmount(nextLevel)}`);

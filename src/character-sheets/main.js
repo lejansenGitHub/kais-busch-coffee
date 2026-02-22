@@ -2,9 +2,11 @@ import './style.css';
 import './quest-style.css';
 import { SKILLS } from './skills.js';
 import { SKILL_UNLOCK_CODES, ITEM_UNLOCK_CODES } from './hero-data.js';
-import simon from './simon.js';
 import hubi from './hubi.js';
 import hubiBoss from './hubi-boss.js';
+import hubiEndboss from './hubi-endboss.js';
+import simon from './simon.js';
+import simonStrong from './simon-strong.js';
 import eva from './eva.js';
 import elena from './elena.js';
 import mirko from './mirko.js';
@@ -13,14 +15,24 @@ import jess from './jess.js';
 import father from './father.js';
 import daniel from './daniel.js';
 import lukas from './lukas.js';
+import kaiWeak from './kai-weak.js';
 import kai from './kai.js';
 import katta from './katta.js';
 
 const STORAGE_KEY = 'character-sheets-state';
 
+const DIFFICULTY = {
+  weak:   { mult: 0.6, label: 'Weak' },
+  easy:   { mult: 0.8, label: 'Easy' },
+  normal: { mult: 1.0, label: 'Normal' },
+  hard:   { mult: 1.2, label: 'Hard' },
+  strong: { mult: 1.4, label: 'Strong' },
+};
+
 function resolveCharacter(raw) {
   const resolved = {
     ...raw,
+    difficulty: 'normal',
     skills: raw.skills
       .map(id => {
         const skill = SKILLS[id];
@@ -34,6 +46,8 @@ function resolveCharacter(raw) {
       return { type: 'skill', name: skill.name, code: SKILL_UNLOCK_CODES[r.skill] };
     } else if (r.item) {
       return { type: 'item', name: r.item.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase()), code: ITEM_UNLOCK_CODES[r.item] };
+    } else if (r.quest_item) {
+      return { type: 'quest_item', name: r.quest_item };
     }
   }
   if (raw.rewards) {
@@ -44,7 +58,7 @@ function resolveCharacter(raw) {
   return resolved;
 }
 
-const DEFAULT_CHARACTERS = [simon, hubi, hubiBoss, eva, elena, mirko, nick, jess, father, daniel, lukas, kai, katta].map(resolveCharacter);
+const DEFAULT_CHARACTERS = [hubi, hubiBoss, hubiEndboss, simon, kaiWeak, jess, nick, eva, daniel, mirko, father, lukas, elena, katta, kai, simonStrong].map(resolveCharacter);
 
 const app = document.querySelector('#app');
 const characterId = app.dataset.character;
@@ -53,32 +67,33 @@ if (!characterId) throw new Error('No data-character attribute on #app');
 const charIndex = DEFAULT_CHARACTERS.findIndex(c => c.id === characterId);
 if (charIndex === -1) throw new Error(`Unknown character: ${characterId}`);
 
+const STATE_VERSION = 3;
+const VERSION_KEY = 'character-sheets-version';
+
 function loadState() {
   try {
+    const ver = Number(localStorage.getItem(VERSION_KEY) || 0);
+    if (ver < STATE_VERSION) {
+      localStorage.removeItem(STORAGE_KEY);
+      localStorage.setItem(VERSION_KEY, STATE_VERSION);
+      return structuredClone(DEFAULT_CHARACTERS);
+    }
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) {
       const parsed = JSON.parse(saved);
-      // Add new characters that don't exist in saved state
       for (let i = parsed.length; i < DEFAULT_CHARACTERS.length; i++) {
         parsed.push(structuredClone(DEFAULT_CHARACTERS[i]));
       }
       for (let i = 0; i < parsed.length; i++) {
         const def = DEFAULT_CHARACTERS[i];
-        if (def && parsed[i].level === undefined) {
-          parsed[i].level = def.level;
-          parsed[i].damage = def.damage;
-          const oldMax = parsed[i].maxHp;
-          parsed[i].maxHp = def.maxHp;
-          if (parsed[i].currentHp >= oldMax) {
-            parsed[i].currentHp = def.maxHp;
-          } else {
-            parsed[i].currentHp = Math.min(parsed[i].currentHp, def.maxHp);
-          }
+        if (def && parsed[i].difficulty === undefined) {
+          parsed[i].difficulty = 'normal';
         }
       }
       return parsed;
     }
   } catch { /* ignore */ }
+  localStorage.setItem(VERSION_KEY, STATE_VERSION);
   return structuredClone(DEFAULT_CHARACTERS);
 }
 
@@ -87,6 +102,25 @@ function saveState() {
 }
 
 let characters = loadState();
+
+function applyDifficulty(charIdx, key) {
+  const base = DEFAULT_CHARACTERS[charIdx];
+  const { mult } = DIFFICULTY[key];
+  const c = characters[charIdx];
+  c.maxHp = Math.round(base.maxHp * mult);
+  c.currentHp = c.maxHp;
+  c.damage = {
+    outer:  Math.round(base.damage.outer * mult),
+    middle: Math.round(base.damage.middle * mult),
+    inner:  Math.round(base.damage.inner * mult),
+  };
+  c.skills.forEach((s, i) => {
+    s.currentUses = base.skills[i].maxUses;
+  });
+  c.difficulty = key;
+  saveState();
+  render();
+}
 
 function hpColor(ratio) {
   if (ratio > 0.5) return '#8b1a1a';
@@ -98,7 +132,7 @@ function renderCard(char) {
   const hpRatio = char.maxHp > 0 ? char.currentHp / char.maxHp : 0;
   const hpPct = Math.round(hpRatio * 100);
 
-  const MAX_SLOTS = 3;
+  const MAX_SLOTS = Math.max(3, char.skills.length);
   const skillsHtml = Array.from({ length: MAX_SLOTS }, (_, si) => {
     const skill = char.skills[si];
     if (!skill) {
@@ -158,9 +192,9 @@ function renderCard(char) {
           <circle cx="60" cy="60" r="16" fill="#1a120a" stroke="#e74c3c" stroke-width="2" />
         </svg>
         <div class="target-legend">
-          <div class="target-row"><span class="target-dot outer"></span><span class="target-zone">Außen</span><span class="target-dmg">${char.damage.outer} dmg</span></div>
-          <div class="target-row"><span class="target-dot middle"></span><span class="target-zone">Mitte</span><span class="target-dmg">${char.damage.middle} dmg</span></div>
-          <div class="target-row"><span class="target-dot inner"></span><span class="target-zone">Innen</span><span class="target-dmg">${char.damage.inner} dmg</span></div>
+          <div class="target-row"><span class="target-dot outer"></span><span class="target-zone">Außen</span><span class="target-dmg">${char.damage.outer} Schaden</span></div>
+          <div class="target-row"><span class="target-dot middle"></span><span class="target-zone">Mitte</span><span class="target-dmg">${char.damage.middle} Schaden</span></div>
+          <div class="target-row"><span class="target-dot inner"></span><span class="target-zone">Innen</span><span class="target-dmg">${char.damage.inner} Schaden</span></div>
         </div>
       </div>
 
@@ -172,14 +206,21 @@ function renderCard(char) {
         <div class="skills-header">Belohnung</div>
         <div class="quest-rewards">
           ${char.rewards.map(r => `<div class="reward-row">
-            <span class="reward-type ${r.type}">${r.type === 'skill' ? 'S' : 'I'}</span>
+            <span class="reward-type ${r.type}">${r.type === 'skill' ? 'S' : r.type === 'quest_item' ? 'Q' : 'I'}</span>
             <span class="reward-name">${r.name}</span>
-            <span class="reward-code">${r.code}</span>
+            ${r.code ? `<span class="reward-code">${r.code}</span>` : ''}
           </div>`).join('')}
         </div>
       </div>` : ''}
 
-      <button class="reset-btn">Reset</button>
+      <div class="bottom-controls">
+        <div class="difficulty-group">
+          ${Object.entries(DIFFICULTY).map(([key, { label }]) =>
+            `<button class="difficulty-btn${char.difficulty === key ? ' active' : ''}" data-diff="${key}">${label}</button>`
+          ).join('')}
+        </div>
+        <button class="reset-btn">Reset</button>
+      </div>
     </div>`;
 }
 
@@ -278,10 +319,18 @@ function render() {
     });
   });
 
+  // Difficulty buttons
+  document.querySelectorAll('.difficulty-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      applyDifficulty(charIndex, btn.dataset.diff);
+    });
+  });
+
   // Reset button
   document.querySelector('.reset-btn').addEventListener('click', () => {
     if (confirm(`${characters[charIndex].name} zurücksetzen?`)) {
       characters[charIndex] = structuredClone(DEFAULT_CHARACTERS[charIndex]);
+      characters[charIndex].difficulty = 'normal';
       saveState();
       render();
     }

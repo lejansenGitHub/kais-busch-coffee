@@ -93,7 +93,20 @@ app.innerHTML = `
     <hr class="story-divider">
 
     <div class="story-chapter">
-      <div class="chapter-title">IV. Die Gesetze dieser Welt</div>
+      <div class="chapter-title">IV. Die Barriere</div>
+      <div class="chapter-text">
+        <p>Auf halbem Weg, am Fuß des Schelmenturms, endet der Weg abrupt. Eine unsichtbare Wand aus purer Magie versperrt die Straße — kalt, summend und undurchdringlich. Lennarts Warnung war berechtigt.</p>
+        <p>„Musik", wiederholt Lennart. „Nur eine bestimmte Melodie kann diese Barriere brechen." Sein Blick fällt auf die Flöte in Hubis Hand — dieselbe Flöte, die ihm bei ihrer ersten Begegnung aus der Tasche gefallen war.</p>
+        <p>Hubi dreht das Instrument nervös in den Fingern. „Ich kann nicht mal Flöte spielen", protestiert er. Aber als er das Instrument an die Lippen setzt, geschieht etwas Seltsames: Eine Melodie strömt heraus — fremd, alt, wunderschön. Hubis Finger bewegen sich wie von selbst.</p>
+        <p>Doch die Musik hat einen Preis. Mit jedem Ton wird Hubis Blick glasiger. Die Melodie übernimmt seinen Geist — er erkennt niemanden mehr. Er steht vor dem Turm wie ein Wächter, der nur einem Befehl gehorcht: Niemand kommt vorbei.</p>
+        <p>Lord Patten muss seinen eigenen Gefährten niederstrecken, um weiterzukommen. Ein bitterer Kampf — aber als Hubi fällt, zerspringt die Barriere in tausend Lichtfragmente. Und Hubi? Blinzelt, schüttelt den Kopf, und fragt: „Was ist passiert?"</p>
+      </div>
+    </div>
+
+    <hr class="story-divider">
+
+    <div class="story-chapter">
+      <div class="chapter-title">V. Die Gesetze dieser Welt</div>
       <div class="chapter-text">
         <p>Lennart hebt die Hand. „Noch etwas, Mylord. Diese Welt hat ihre eigenen Regeln — und sie sind auf Eurer Seite."</p>
         <p>„Wenn Ihr in einem Kampf fällt, seid Ihr nicht besiegt. Trinkt ein Bier, sammelt Eure Kräfte — und der Gegner wird Euch erneut herausfordern. Ihr könnt so oft antreten, wie Ihr müsst."</p>
@@ -105,7 +118,7 @@ app.innerHTML = `
     <hr class="story-divider">
 
     <div class="story-chapter">
-      <div class="chapter-title">V. Die Motivation</div>
+      <div class="chapter-title">VI. Die Motivation</div>
       <div class="chapter-text">
         <p>Es gibt noch einen Grund, warum Lord Patten es zurück schaffen muss — einen, der schwerer wiegt als alle anderen.</p>
         <p>Er heiratet. Bald. Seine Verlobte wartet, die Vorbereitungen laufen, und wenn er nicht rechtzeitig zurück ist... nun, man möchte sich nicht vorstellen, was seine zukünftige Gemahlin zu sagen hätte.</p>
@@ -117,15 +130,40 @@ app.innerHTML = `
     <hr class="story-divider">
 
     <div class="story-chapter">
-      <div class="chapter-title">VI. Epilog</div>
+      <div class="chapter-title">VII. Das Ende der Altstadt</div>
       <div class="chapter-text">
         <p>Die Altstadt liegt hinter ihnen. Die Gefährten sind gesammelt — manche willig, manche mit ein paar blauen Flecken mehr als nötig. Das Portal schimmert vor ihnen in der Abenddämmerung.</p>
         <p>Lennart tritt vor, streckt die Hände aus — und hält inne. Ein Lächeln breitet sich auf seinem Gesicht aus.</p>
         <p>„Mylord... ich habe mich geirrt. Das Portal ist stabil. Sehr stabil sogar. Es wird nicht in drei Stunden verschwinden. Es wird... nun ja, es wird noch eine ganze Weile hier sein."</p>
-        <p>Stille. Dann Gelächter.</p>
-        <p>Lord Patten blickt seine Gefährten an. Die Anspannung fällt von ihnen ab wie ein schwerer Mantel. Jemand deutet auf eine Taverne am Straßenrand.</p>
+        <p>Stille. Erleichterung. Jemand deutet auf eine Taverne am Straßenrand. Lord Patten grinst — eine Runde hätten sie sich verdient.</p>
+      </div>
+    </div>
+
+    <hr class="story-divider">
+
+    <div class="story-chapter">
+      <div class="chapter-title">VIII. Stimme der Vernunft</div>
+      <div class="chapter-text">
+        <p>„NEIN."</p>
+        <p>Hubi steht vor dem Portal. Arme verschränkt, Blick eisern. Während alle anderen die Taverne ansteuern wollen, hat er sich breitbeinig vor den schimmernden Durchgang gestellt.</p>
+        <p>„Wir gehen JETZT durch. Sofort. Keine Taverne, kein Umweg, kein Bier." Seine Stimme zittert — nicht vor Wut, sondern vor Angst. Denn Hubi kennt Lord Pattens Verlobte. Und er weiß: Wenn es um die Hochzeit geht, ist mit ihr nicht zu spaßen.</p>
+        <p>„Mylord, ich sage das als Freund", fleht Hubi. „Eure Verlobte wird uns ALLE umbringen, wenn wir zu spät kommen. Und sie fängt bei MIR an!" Er zeigt auf die Gruppe. „Jede Minute, die wir hier vertrödeln, ist eine Minute näher an unserem Untergang!"</p>
+        <p>Lord Patten seufzt. Er weiß, dass Hubi nicht ganz Unrecht hat. Aber nach allem, was sie durchgemacht haben — die Kämpfe, die Barriere, die Quests — verdienen sie einen Moment der Ruhe.</p>
+        <p>„Ihr wollt in die Taverne?" Hubis Stimme wird schrill. „Dann müsst Ihr an mir vorbei!"</p>
+        <p>Und so kommt es zum letzten Kampf des Abenteuers — nicht gegen einen verzauberten Feind, nicht gegen dunkle Magie, sondern gegen die Stimme der Vernunft höchstpersönlich.</p>
+      </div>
+    </div>
+
+    <hr class="story-divider">
+
+    <div class="story-chapter">
+      <div class="chapter-title">IX. Epilog</div>
+      <div class="chapter-text">
+        <p>Hubi sackt zusammen und seufzt tief. „Na gut. EINE Runde in der Taverne. Aber wenn Eure Verlobte fragt — ich war dagegen. Ich war die ganze Zeit dagegen."</p>
+        <p>Er steht auf, klopft sich ab und murmelt: „Wir sind so was von tot."</p>
+        <p>Die Gefährten jubeln. Die Taverne ruft. Lord Patten hebt sein Glas und blickt in die Runde — auf Freunde, die durch Raum und Zeit mit ihm gereist sind und am Ende nur eine Frage übrig haben:</p>
         <p>„Die Hochzeit kann warten", sagt Lord Patten und grinst. „Dafür ist ja dann noch der Rest meines Lebens da."</p>
-        <p>Die Gefährten jubeln. Die Taverne ruft. Und das Portal? Das Portal kann bis morgen warten.</p>
+        <p>Und das Portal? Das Portal kann bis morgen warten.</p>
       </div>
     </div>
   </div>
