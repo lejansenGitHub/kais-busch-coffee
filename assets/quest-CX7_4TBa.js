@@ -16,7 +16,11 @@ What German word is hidden here?</em>
 
 <em>Riddle 3:
 "She wanted to TAG along, but only during daylight."
-What German word is hidden here?</em>`,criteria:["Alle drei deutschen Wörter wurden korrekt erraten und Elena gesagt"],rewards:[{type:"skill",name:"Insight",code:"7835"}]}]},father:{name:"Der Vater",title:"Der Bierkenner",portrait:"🍺",intro:"Manche nennen ihn Kalle. Andere kennen ihn als Karl-Heinz. Aber eines weiß jeder: Er kennt sein Bier. In seiner Gilde wird nicht nach Namen gefragt — sondern nach Geschmack.",quests:[{title:"Die Bierverkostung",task:'Der Vater stellt dir zwei Gläser Bier hin — eines Kölsch, eines Alt. Du trinkst mit geschlossenen Augen und musst erkennen, welches welches ist. Das Ganze geht über 3 Runden mit frischen Gläsern. Du musst alle 3 Runden richtig erraten, um zu bestehen. „Wer sein Bier nicht kennt, kennt sich selbst nicht."',criteria:["In allen 3 Runden wurde Kölsch und Alt korrekt erkannt (mit geschlossenen Augen)"],rewards:[{type:"item",name:"Drinking Horn",code:"8037"}]}]}},t=document.querySelector("#app"),a=t.dataset.character,n=s[a];n?t.innerHTML=`
+What German word is hidden here?</em>`,criteria:["Alle drei deutschen Wörter wurden korrekt erraten und Elena gesagt"],rewards:[{type:"skill",name:"Insight",code:"7835"}]}]},martina:{name:"Martina",title:"Die Dirigentin",portrait:"🎵",intro:'Martina steht inmitten eines kleinen Platzes und dirigiert — doch kein Orchester ist zu sehen. Ihre Hände zeichnen unsichtbare Noten in die Luft. Als sie Lord Patten bemerkt, hält sie inne: „Ah, ein neues Publikum! Oder besser — ein neuer Musiker? Die Musik dieser Welt ist seltsam, aber ich spüre ihren Rhythmus. Kannst du ihn auch spüren?"',quests:[{title:"Der Takt der Altstadt",task:`Martina klatscht einen Rhythmus vor — fünf Takte, mal schnell, mal langsam. Lord Patten muss den Takt nachklatschen. Mindestens 3 von 5 Takten müssen korrekt wiedergegeben werden.
+
+„Musik ist das Einzige, was Mauern durchbrechen kann — im wörtlichen Sinne. Aber dafür braucht man Taktgefühl. Zeig mir deins."`,criteria:["Mindestens 3 von 5 vorgeklatschten Takten wurden korrekt nachgeklatscht"],rewards:[{type:"quest_item",name:"Notenblatt"}]}]},"hubi-quest":{name:"Hubi",title:"Die Barriere am Schelmenturm",portrait:"🎶",intro:'Vor dem Schelmenturm flimmert eine unsichtbare Wand in der Luft. Wer hindurchzugehen versucht, wird zurückgestoßen. Lennart runzelt die Stirn: „Magisch. Aber nicht unüberwindbar — ich spüre, dass Musik der Schlüssel ist. Hast du etwas, womit man spielen könnte?"',quests:[{title:"Die Melodie der Barriere",task:`Lord Patten muss die Flöte (von Hubi erhalten) zusammen mit dem Notenblatt (von Martina erhalten) verwenden, um eine Melodie zu spielen. Der Spieler spielt auf der Flöte die Noten nach, die auf dem Notenblatt stehen.
+
+Achtung: Die Musik durchbricht die Barriere, aber sie hat auch eine unerwartete Wirkung — Hubi wird von der Melodie verzaubert und verliert den Verstand. Er stellt sich Lord Patten als Mid-Boss in den Weg.`,criteria:["Die Flöte und das Notenblatt wurden kombiniert und eine Melodie gespielt","Die Barriere am Schelmenturm wurde durchbrochen"],rewards:[{type:"quest_item",name:"Barriere durchbrochen"}]}]},father:{name:"Der Vater",title:"Der Bierkenner",portrait:"🍺",intro:"Manche nennen ihn Kalle. Andere kennen ihn als Karl-Heinz. Aber eines weiß jeder: Er kennt sein Bier. In seiner Gilde wird nicht nach Namen gefragt — sondern nach Geschmack.",quests:[{title:"Die Bierverkostung",task:'Der Vater stellt dir zwei Gläser Bier hin — eines Kölsch, eines Alt. Du trinkst mit geschlossenen Augen und musst erkennen, welches welches ist. Das Ganze geht über 3 Runden mit frischen Gläsern. Du musst alle 3 Runden richtig erraten, um zu bestehen. „Wer sein Bier nicht kennt, kennt sich selbst nicht."',criteria:["In allen 3 Runden wurde Kölsch und Alt korrekt erkannt (mit geschlossenen Augen)"],rewards:[{type:"item",name:"Drinking Horn",code:"8037"}]}]}},t=document.querySelector("#app"),a=t.dataset.character,n=s[a];n?t.innerHTML=`
     <div class="character-card">
       <div class="card-header">
         <div class="character-name">${n.name}</div>
@@ -52,9 +56,9 @@ What German word is hidden here?</em>`,criteria:["Alle drei deutschen Wörter wu
             <div class="quest-rewards">
               ${i.rewards.map(e=>`
                 <div class="reward-row">
-                  <span class="reward-type ${e.type}">${e.type==="skill"?"S":"I"}</span>
+                  <span class="reward-type ${e.type}">${e.type==="skill"?"S":e.type==="quest_item"?"Q":"I"}</span>
                   <span class="reward-name">${e.name}</span>
-                  <span class="reward-code">${e.code}</span>
+                  ${e.code?`<span class="reward-code">${e.code}</span>`:""}
                 </div>
               `).join("")}
             </div>

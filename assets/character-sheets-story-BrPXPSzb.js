@@ -66,6 +66,7 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const e
         <p>Lennart konzentriert sich, seine Finger zittern, als er den magischen Fluss dieser Welt ertastet. Dann verzieht er das Gesicht.</p>
         <p>„Ein Portal. Ich spüre es deutlich — am Ende dieser Altstadt. Aber..." Er zögert. „Es ist instabil. Drei Stunden, vielleicht weniger. Dann schließt es sich."</p>
         <p>Drei Stunden. Für Lord Patten eine Ewigkeit — und gleichzeitig nichts. Der Weg durch die Altstadt liegt vor ihnen, doch er wird nicht einfach sein.</p>
+        <p>Lennart hält inne und schließt die Augen. „Da ist noch etwas. Auf halbem Weg — eine magische Barriere. Ich kann sie spüren, aber nicht durchbrechen. Nicht mit gewöhnlicher Magie." Er öffnet die Augen. „Musik. Ich glaube, nur Musik kann sie lösen. Eine bestimmte Melodie, gespielt auf dem richtigen Instrument."</p>
         <p>„Wir müssen uns beeilen", drängt Lennart. „Jede Minute zählt."</p>
       </div>
     </div>
