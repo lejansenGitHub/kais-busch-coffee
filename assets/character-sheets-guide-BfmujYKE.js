@@ -944,7 +944,7 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const A
       </div>
 
       <div class="guide-text" style="margin-top: 12px;"><strong>HP (Lebenspunkte)</strong> zeigen, wie viel Schaden ein Charakter noch aushalten kann. Fallen die HP auf 0, ist der Kampf vorbei.</div>
-      <div class="guide-text">Lord Patten startet mit <strong>20 HP</strong> und kann durch Level-Ups mehr bekommen. Gegner haben je nach Stärke zwischen 15 und 55 HP.</div>
+      <div class="guide-text">Lord Patten startet mit <strong>20 HP</strong> und kann durch Level-Ups mehr bekommen. Gegner haben je nach Stärke zwischen 15 und 80 HP.</div>
     </div>
 
     <hr class="guide-divider">
