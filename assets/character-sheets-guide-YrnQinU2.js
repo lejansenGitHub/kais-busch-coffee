@@ -1,4 +1,4 @@
-import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const A=document.createElement("style");A.textContent=`
+import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const L=document.createElement("style");L.textContent=`
   .back-link {
     display: inline-block;
     margin-bottom: 16px;
@@ -378,7 +378,7 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const A
     line-height: 1;
     cursor: pointer;
   }
-`;document.head.appendChild(A);const P=document.getElementById("app");P.innerHTML=`
+`;document.head.appendChild(L);const W=document.getElementById("app");W.innerHTML=`
   <a href="../" class="back-link">← Zurück</a>
   <div class="character-card">
     <div class="card-header">
@@ -838,7 +838,7 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const A
     <!-- SKILLS -->
     <div class="guide-section">
       <div class="section-title">6. Skills</div>
-      <div class="guide-text">Jeder Charakter hat bis zu <strong>3 Skill-Slots</strong>. Es gibt zwei Typen:</div>
+      <div class="guide-text">Jeder Charakter hat <strong>Skill-Slots</strong> (Lord Patten startet mit 1 und bekommt mehr durch Level-Ups und Items). Es gibt zwei Typen:</div>
 
       <div class="guide-text"><strong>Aktive Skills (A)</strong> — Kosten 1 Aktion. Haben begrenzte Einsätze. Du musst dich entscheiden: Werfen oder Skill einsetzen?</div>
       <div class="guide-text"><strong>Passive Skills (P)</strong> — Immer aktiv. Kosten keine Aktion und wirken dauerhaft.</div>
@@ -977,5 +977,40 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const A
       <div class="guide-text">Lord Patten ist dazu bestimmt zu gewinnen — es ist nur eine Frage der Zeit!</div>
     </div>
 
+    <hr class="guide-divider">
+
+    <!-- DIFFICULTY -->
+    <div class="guide-section">
+      <div class="section-title">12. Schwierigkeitsgrad anpassen</div>
+      <div class="guide-text">Jeder Gegner-Charakter hat auf seiner Seite <strong>5 Schwierigkeits-Buttons</strong> — direkt unter der HP-Anzeige. Damit könnt ihr euren Charakter stärker oder schwächer machen:</div>
+
+      <div class="target-labels">
+        <div class="target-label-row">
+          <div class="target-zone-name" style="color: #27ae60;">Schwach</div>
+          <div class="target-zone-detail">0,6× HP & Schaden</div>
+        </div>
+        <div class="target-label-row">
+          <div class="target-zone-name" style="color: #7aaa4a;">Leicht</div>
+          <div class="target-zone-detail">0,8× HP & Schaden</div>
+        </div>
+        <div class="target-label-row">
+          <div class="target-zone-name" style="color: #c9aa71;">Normal</div>
+          <div class="target-zone-detail">1,0× (Standard)</div>
+        </div>
+        <div class="target-label-row">
+          <div class="target-zone-name" style="color: #e07a3a;">Schwer</div>
+          <div class="target-zone-detail">1,2× HP & Schaden</div>
+        </div>
+        <div class="target-label-row">
+          <div class="target-zone-name" style="color: #e74c3c;">Stark</div>
+          <div class="target-zone-detail">1,4× HP & Schaden</div>
+        </div>
+      </div>
+
+      <div class="guide-text" style="margin-top: 12px;"><strong>Warum?</strong> Sascha wird im Laufe des Abends betrunken und durch die vorherigen Kämpfe eingeübt sein. Je nach Zustand müssen Gegner stärker oder schwächer werden, damit die Kämpfe spannend bleiben.</div>
+      <div class="guide-text"><strong>Wann ändern?</strong> Lennart gibt euch ein Zeichen, wenn ihr den Schwierigkeitsgrad anpassen sollt. Wenn Sascha gegen euch verliert, macht euch für den nächsten Kampf etwas schwächer.</div>
+      <div class="guide-text"><strong>Wo?</strong> Öffnet eure Gegner-Seite auf dem Handy. Unter der HP-Leiste seht ihr fünf Buttons (<em>Schwach / Leicht / Normal / Schwer / Stark</em>). Einfach antippen — HP und Schaden werden sofort angepasst.</div>
+    </div>
+
   </div>
-`;const r=document.createElement("div");r.className="zoom-overlay";r.innerHTML='<button class="zoom-close">×</button><div class="zoom-content"></div>';document.body.appendChild(r);const c=r.querySelector(".zoom-content");let o=1,s=0,a=0,u=0,v=0,d=null;function M(){const e=window.innerWidth,t=window.innerHeight,n=u*o,l=v*o;n<=e?s=(e-n)/2:s=Math.max(e-n,Math.min(0,s)),l<=t?a=(t-l)/2:a=Math.max(t-l,Math.min(0,a))}function g(){d&&(M(),d.style.transform=`translate(${s}px, ${a}px) scale(${o})`,d.style.width=u+"px",d.style.height=v+"px")}function H(e){const t=e.cloneNode(!0);t.removeAttribute("width"),t.removeAttribute("height"),c.innerHTML="",c.style.display="block",c.appendChild(t),d=t;const n=window.innerWidth,l=window.innerHeight,f=t.viewBox.baseVal,h=f&&f.width&&f.height?f.width/f.height:16/9,x=20;(n-x*2)/h<=l-x*2?(u=n-x*2,v=u/h):(v=l-x*2,u=v*h),o=1,s=0,a=0,g(),r.classList.add("visible")}function L(){r.classList.remove("visible"),d=null}function E(e,t,n){e=Math.max(1,Math.min(6,e));const l=e/o;s=t-l*(t-s),a=n-l*(n-a),o=e,g()}r.querySelector(".zoom-close").addEventListener("click",e=>{e.stopPropagation(),L()});let b=!1;r.addEventListener("touchstart",()=>{b=!1},{passive:!0});r.addEventListener("touchmove",()=>{b=!0},{passive:!0});let i=null,p=1,k=0,y=0;c.addEventListener("touchstart",e=>{d&&(e.touches.length===2?(e.preventDefault(),i=Array.from(e.touches).map(t=>({x:t.clientX,y:t.clientY})),p=o,k=s,y=a):e.touches.length===1&&o>1.01&&(e.preventDefault(),i=[{x:e.touches[0].clientX,y:e.touches[0].clientY}],k=s,y=a))},{passive:!1});c.addEventListener("touchmove",e=>{if(!(!i||!d))if(e.preventDefault(),e.touches.length===2&&i.length===2){const t=Array.from(e.touches).map(G=>({x:G.clientX,y:G.clientY})),n=Math.hypot(i[1].x-i[0].x,i[1].y-i[0].y),l=Math.hypot(t[1].x-t[0].x,t[1].y-t[0].y),f=Math.max(1,Math.min(6,p*(l/n))),h=(i[0].x+i[1].x)/2,x=(i[0].y+i[1].y)/2,D=(t[0].x+t[1].x)/2,W=(t[0].y+t[1].y)/2,S=f/p;s=k+(D-h)+h*(1-S),a=y+(W-x)+x*(1-S),o=f,g()}else e.touches.length===1&&i.length===1&&(s=k+(e.touches[0].clientX-i[0].x),a=y+(e.touches[0].clientY-i[0].y),g())},{passive:!1});c.addEventListener("touchend",e=>{if(i=null,e.touches.length>0||b)return;const t=Date.now();if(t-m<300){if(o>1.5)o=1,s=0,a=0,g();else{const n=e.changedTouches[0].clientX,l=e.changedTouches[0].clientY;E(3,n,l)}m=0}else m=t});let m=0;c.addEventListener("touchcancel",()=>{i=null});r.addEventListener("click",e=>{(e.target===r||e.target===c)&&L()});r.addEventListener("wheel",e=>{if(!d)return;e.preventDefault();const t=e.deltaY<0?1.2:1/1.2;E(o*t,e.clientX,e.clientY)},{passive:!1});let z=!1,w={x:0,y:0};c.addEventListener("mousedown",e=>{!d||o<=1.01||(z=!0,w={x:e.clientX-s,y:e.clientY-a},r.style.cursor="grabbing")});window.addEventListener("mousemove",e=>{z&&(s=e.clientX-w.x,a=e.clientY-w.y,g())});window.addEventListener("mouseup",()=>{z=!1,r.style.cursor=""});document.querySelectorAll(".illust-panel").forEach(e=>{const t=e.querySelector("svg");t&&e.addEventListener("click",()=>H(t))});
+`;const r=document.createElement("div");r.className="zoom-overlay";r.innerHTML='<button class="zoom-close">×</button><div class="zoom-content"></div>';document.body.appendChild(r);const c=r.querySelector(".zoom-content");let d=1,s=0,a=0,u=0,v=0,o=null;function H(){const e=window.innerWidth,t=window.innerHeight,n=u*d,l=v*d;n<=e?s=(e-n)/2:s=Math.max(e-n,Math.min(0,s)),l<=t?a=(t-l)/2:a=Math.max(t-l,Math.min(0,a))}function g(){o&&(H(),o.style.transform=`translate(${s}px, ${a}px) scale(${d})`,o.style.width=u+"px",o.style.height=v+"px")}function M(e){const t=e.cloneNode(!0);t.removeAttribute("width"),t.removeAttribute("height"),c.innerHTML="",c.style.display="block",c.appendChild(t),o=t;const n=window.innerWidth,l=window.innerHeight,f=t.viewBox.baseVal,h=f&&f.width&&f.height?f.width/f.height:16/9,x=20;(n-x*2)/h<=l-x*2?(u=n-x*2,v=u/h):(v=l-x*2,u=v*h),d=1,s=0,a=0,g(),r.classList.add("visible")}function A(){r.classList.remove("visible"),o=null}function E(e,t,n){e=Math.max(1,Math.min(6,e));const l=e/d;s=t-l*(t-s),a=n-l*(n-a),d=e,g()}r.querySelector(".zoom-close").addEventListener("click",e=>{e.stopPropagation(),A()});let b=!1;r.addEventListener("touchstart",()=>{b=!1},{passive:!0});r.addEventListener("touchmove",()=>{b=!0},{passive:!0});let i=null,p=1,k=0,m=0;c.addEventListener("touchstart",e=>{o&&(e.touches.length===2?(e.preventDefault(),i=Array.from(e.touches).map(t=>({x:t.clientX,y:t.clientY})),p=d,k=s,m=a):e.touches.length===1&&d>1.01&&(e.preventDefault(),i=[{x:e.touches[0].clientX,y:e.touches[0].clientY}],k=s,m=a))},{passive:!1});c.addEventListener("touchmove",e=>{if(!(!i||!o))if(e.preventDefault(),e.touches.length===2&&i.length===2){const t=Array.from(e.touches).map(G=>({x:G.clientX,y:G.clientY})),n=Math.hypot(i[1].x-i[0].x,i[1].y-i[0].y),l=Math.hypot(t[1].x-t[0].x,t[1].y-t[0].y),f=Math.max(1,Math.min(6,p*(l/n))),h=(i[0].x+i[1].x)/2,x=(i[0].y+i[1].y)/2,D=(t[0].x+t[1].x)/2,P=(t[0].y+t[1].y)/2,S=f/p;s=k+(D-h)+h*(1-S),a=m+(P-x)+x*(1-S),d=f,g()}else e.touches.length===1&&i.length===1&&(s=k+(e.touches[0].clientX-i[0].x),a=m+(e.touches[0].clientY-i[0].y),g())},{passive:!1});c.addEventListener("touchend",e=>{if(i=null,e.touches.length>0||b)return;const t=Date.now();if(t-y<300){if(d>1.5)d=1,s=0,a=0,g();else{const n=e.changedTouches[0].clientX,l=e.changedTouches[0].clientY;E(3,n,l)}y=0}else y=t});let y=0;c.addEventListener("touchcancel",()=>{i=null});r.addEventListener("click",e=>{(e.target===r||e.target===c)&&A()});r.addEventListener("wheel",e=>{if(!o)return;e.preventDefault();const t=e.deltaY<0?1.2:1/1.2;E(d*t,e.clientX,e.clientY)},{passive:!1});let z=!1,w={x:0,y:0};c.addEventListener("mousedown",e=>{!o||d<=1.01||(z=!0,w={x:e.clientX-s,y:e.clientY-a},r.style.cursor="grabbing")});window.addEventListener("mousemove",e=>{z&&(s=e.clientX-w.x,a=e.clientY-w.y,g())});window.addEventListener("mouseup",()=>{z=!1,r.style.cursor=""});document.querySelectorAll(".illust-panel").forEach(e=>{const t=e.querySelector("svg");t&&e.addEventListener("click",()=>M(t))});
