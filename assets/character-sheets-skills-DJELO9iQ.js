@@ -1,4 +1,4 @@
-import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */import{S as v}from"./skills-Bzft9rFb.js";import{a as r,I as o,S as p}from"./hero-data-HxjABdKt.js";const $=document.querySelector("#app"),c=Object.entries(v),d=c.filter(([,i])=>i.type==="A"),u=c.filter(([,i])=>i.type==="P");function m([i,s]){const e=s.type==="A",t=e?"active":"passive",n=e?`${s.maxUses} ${s.maxUses!==1?"Einsätze":"Einsatz"}`:"∞",l=p[i];return`
+import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */import{S as v}from"./skills-DPcI9NzO.js";import{a as r,I as o,S as p}from"./hero-data-HxjABdKt.js";const $=document.querySelector("#app"),c=Object.entries(v),d=c.filter(([,i])=>i.type==="A"),u=c.filter(([,i])=>i.type==="P");function m([i,s]){const e=s.type==="A",t=e?"active":"passive",n=e?`${s.maxUses} ${s.maxUses!==1?"Einsätze":"Einsatz"}`:"∞",l=p[i];return`
     <div class="skill-slot">
       <div class="skill-badge ${t}">${s.type}</div>
       <div class="skill-info">
