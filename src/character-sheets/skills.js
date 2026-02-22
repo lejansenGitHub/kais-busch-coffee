@@ -1,7 +1,7 @@
 export const SKILLS = {
   // Active — enemy debuffs
   blind_fury:    { name: 'Blind Fury',    type: 'A', desc: 'Gegner muss mit geschlossenen Augen werfen',                    maxUses: 1, duration: 2 },
-  repulsion:     { name: 'Repulsion',     type: 'A', desc: 'Gegner muss mit Abstand zur Zielscheibe werfen',           maxUses: 1, duration: 2 },
+  repulsion:     { name: 'Repulsion',     type: 'A', desc: 'Gegner muss einen vollen Schritt zur Seite treten (Richtung frei wählbar)', maxUses: 1, duration: 2 },
   pushback:      { name: 'Pushback',      type: 'A', desc: 'Gegner muss einen Schritt zurücktreten',                              maxUses: 2, duration: 2 },
   iron_ward:     { name: 'Iron Ward',     type: 'A', desc: 'Innenkreis (Crit) ist für den Gegner blockiert',               maxUses: 1, duration: 3 },
   off_balance:   { name: 'Off Balance',   type: 'A', desc: 'Gegner muss mit der schwachen Hand werfen',                       maxUses: 1, duration: 2 },
