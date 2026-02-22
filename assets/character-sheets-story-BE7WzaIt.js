@@ -86,7 +86,19 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const e
     <hr class="story-divider">
 
     <div class="story-chapter">
-      <div class="chapter-title">IV. Die Motivation</div>
+      <div class="chapter-title">IV. Die Gesetze dieser Welt</div>
+      <div class="chapter-text">
+        <p>Lennart hebt die Hand. „Noch etwas, Mylord. Diese Welt hat ihre eigenen Regeln — und sie sind auf Eurer Seite."</p>
+        <p>„Wenn Ihr in einem Kampf fällt, seid Ihr nicht besiegt. Trinkt ein Bier, sammelt Eure Kräfte — und der Gegner wird Euch erneut herausfordern. Ihr könnt so oft antreten, wie Ihr müsst."</p>
+        <p>„Und wenn Euch eine Prüfung nicht gelingt — eine Quest, ein Rätsel — dann wartet fünf Minuten. Die Magie dieser Welt setzt sich zurück, und Ihr dürft es erneut versuchen."</p>
+        <p>Lord Patten nickt. Das Schicksal hat ihn nicht hierher gebracht, um zu scheitern. Er wird jeden Kampf gewinnen, jede Prüfung bestehen — es ist nur eine Frage der Zeit.</p>
+      </div>
+    </div>
+
+    <hr class="story-divider">
+
+    <div class="story-chapter">
+      <div class="chapter-title">V. Die Motivation</div>
       <div class="chapter-text">
         <p>Es gibt noch einen Grund, warum Lord Patten es zurück schaffen muss — einen, der schwerer wiegt als alle anderen.</p>
         <p>Er heiratet. Bald. Seine Verlobte wartet, die Vorbereitungen laufen, und wenn er nicht rechtzeitig zurück ist... nun, man möchte sich nicht vorstellen, was seine zukünftige Gemahlin zu sagen hätte.</p>
@@ -98,7 +110,7 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const e
     <hr class="story-divider">
 
     <div class="story-chapter">
-      <div class="chapter-title">V. Epilog</div>
+      <div class="chapter-title">VI. Epilog</div>
       <div class="chapter-text">
         <p>Die Altstadt liegt hinter ihnen. Die Gefährten sind gesammelt — manche willig, manche mit ein paar blauen Flecken mehr als nötig. Das Portal schimmert vor ihnen in der Abenddämmerung.</p>
         <p>Lennart tritt vor, streckt die Hände aus — und hält inne. Ein Lächeln breitet sich auf seinem Gesicht aus.</p>
