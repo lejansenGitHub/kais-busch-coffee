@@ -26,7 +26,7 @@ export const SKILLS = {
   sturdy_arm:    { name: 'Sturdy Arm',    type: 'P', desc: 'Du wirfst immer mit dem Sandsack hoher Qualität',            maxUses: 0 },
   worn_grip:     { name: 'Worn Grip',     type: 'P', desc: 'Du wirfst immer mit dem Sandsack niedriger Qualität',             maxUses: 0 },
   titans_grip:   { name: "Titan's Grip",  type: 'P', desc: 'Deine Innentreffer verursachen +2 Bonusschaden',               maxUses: 0 },
-  last_stand:    { name: 'Last Stand',    type: 'P', desc: 'Unter 5 HP verursachen alle deine Treffer +2 Schaden',             maxUses: 0 },
+  last_stand:    { name: 'Last Stand',    type: 'P', desc: 'Unter 10 HP verursachen alle deine Treffer +2 Schaden',            maxUses: 0 },
   fortress:      { name: 'Fortress',      type: 'P', desc: 'Außenkreis-Treffer des Gegners verursachen keinen Schaden',             maxUses: 0 },
 
   silver_tongue: { name: 'Silver Tongue', type: 'P', desc: 'Du darfst während der gegnerischen Würfe frei reden, um abzulenken', maxUses: 0 },

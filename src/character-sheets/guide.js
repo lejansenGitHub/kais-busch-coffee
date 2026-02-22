@@ -863,7 +863,7 @@ app.innerHTML = `
           <div class="skill-ex-badge passive">P</div>
           <div class="skill-ex-name">Last Stand</div>
         </div>
-        <div class="skill-ex-desc">Unter 5 HP verursachen alle deine Treffer <strong>+2 Bonusschaden</strong>.</div>
+        <div class="skill-ex-desc">Unter 10 HP verursachen alle deine Treffer <strong>+2 Bonusschaden</strong>.</div>
         <div class="skill-ex-scenario">\u{1F4A1} Szenario: Du hast nur noch 3 HP \u2014 aber jetzt z\u00e4hlt jeder deiner W\u00fcrfe 2 Schaden mehr! Ein Innentreffer, der normalerweise 5 macht, macht jetzt 7. Gef\u00e4hrlich f\u00fcr deinen Gegner!</div>
       </div>
     </div>
