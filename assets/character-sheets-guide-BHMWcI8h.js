@@ -1,4 +1,4 @@
-import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const e=document.createElement("style");e.textContent=`
+import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const z=document.createElement("style");z.textContent=`
   .back-link {
     display: inline-block;
     margin-bottom: 16px;
@@ -337,7 +337,41 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const e
     margin-bottom: 6px;
     margin-top: 12px;
   }
-`;document.head.appendChild(e);const i=document.getElementById("app");i.innerHTML=`
+  .illust-panel { cursor: zoom-in; }
+
+  /* Fullscreen zoom overlay */
+  .zoom-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.92);
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  .zoom-overlay.visible { display: flex; align-items: center; justify-content: center; }
+  .zoom-overlay svg {
+    max-width: 100vw;
+    max-height: 100vh;
+    transform-origin: 0 0;
+  }
+  .zoom-close {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    z-index: 10000;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+  }
+`;document.head.appendChild(z);const G=document.getElementById("app");G.innerHTML=`
   <a href="../" class="back-link">← Zurück</a>
   <div class="character-card">
     <div class="card-header">
@@ -937,4 +971,4 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const e
     </div>
 
   </div>
-`;
+`;const t=document.createElement("div");t.className="zoom-overlay";t.innerHTML='<button class="zoom-close">×</button><div class="zoom-content"></div>';document.body.appendChild(t);const w=t.querySelector(".zoom-content");let a=1,r=0,n=0,l=null;function h(){if(!l)return;const e=t.clientWidth,i=t.clientHeight,d=l.viewBox.baseVal,f=d.width/d.height,o=e,c=e/f,x=o*a,g=c*a,y=Math.min(0,e-x),u=Math.min(0,i-g);r=Math.max(y,Math.min(0,r)),n=Math.max(u,Math.min(0,n)),l.style.width=x+"px",l.style.height=g+"px",l.style.transform=`translate(${r}px, ${n}px)`}function A(e){const i=e.cloneNode(!0);i.removeAttribute("width"),i.removeAttribute("height"),i.style.width="100%",i.style.height="auto",i.style.maxWidth="100vw",i.style.maxHeight="100vh",w.innerHTML="",w.appendChild(i),l=i,a=1,r=0,n=0,h(),t.classList.add("visible")}function S(){t.classList.remove("visible"),l=null}t.querySelector(".zoom-close").addEventListener("click",S);t.addEventListener("click",e=>{e.target===t&&S()});let s=null,m=1,v=0,k=0;t.addEventListener("touchstart",e=>{l&&(e.touches.length===2?(e.preventDefault(),s=Array.from(e.touches).map(i=>({x:i.clientX,y:i.clientY})),m=a,v=r,k=n):e.touches.length===1&&a>1&&(e.preventDefault(),s=[{x:e.touches[0].clientX,y:e.touches[0].clientY}],v=r,k=n))},{passive:!1});t.addEventListener("touchmove",e=>{if(!(!s||!l))if(e.preventDefault(),e.touches.length===2&&s.length===2){const i=Array.from(e.touches).map(p=>({x:p.clientX,y:p.clientY})),d=Math.hypot(s[1].x-s[0].x,s[1].y-s[0].y),f=Math.hypot(i[1].x-i[0].x,i[1].y-i[0].y),o=Math.max(1,Math.min(6,m*(f/d))),c=(s[0].x+s[1].x)/2,x=(s[0].y+s[1].y)/2,g=(i[0].x+i[1].x)/2,y=(i[0].y+i[1].y)/2,u=o/m;r=v+(g-c)+c*(1-u),n=k+(y-x)+x*(1-u),a=o,h()}else e.touches.length===1&&s.length===1&&(r=v+(e.touches[0].clientX-s[0].x),n=k+(e.touches[0].clientY-s[0].y),h())},{passive:!1});t.addEventListener("touchend",()=>{s=null});let b=0;t.addEventListener("touchend",e=>{if(e.touches.length>0)return;const i=Date.now();i-b<300&&(a>1.5?(a=1,r=0,n=0):(a=3,r=-t.clientWidth,n=-t.clientHeight),h()),b=i});t.addEventListener("wheel",e=>{if(!l)return;e.preventDefault();const i=e.deltaY<0?1.2:1/1.2,d=Math.max(1,Math.min(6,a*i)),f=d/a,o=e.clientX,c=e.clientY;r=o-f*(o-r),n=c-f*(c-n),a=d,h()},{passive:!1});document.querySelectorAll(".illust-panel").forEach(e=>{const i=e.querySelector("svg");i&&e.addEventListener("click",()=>A(i))});
