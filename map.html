@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monheim Quest Map</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1a1a; font-family: 'Segoe UI', sans-serif; }
+  h1 { color: #c9aa71; text-align: center; padding: 16px; font-size: 22px; letter-spacing: 2px; }
+  .legend { display: flex; gap: 24px; justify-content: center; padding: 0 16px 12px; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 6px; color: #aaa; font-size: 13px; }
+  .legend-dot { width: 14px; height: 14px; border-radius: 50%; border: 2px solid rgba(0,0,0,0.3); }
+  .map-container {
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
+    overflow: auto;
+  }
+  .map-container img {
+    display: block;
+    width: 100%;
+    min-width: 1200px;
+  }
+  .marker {
+    position: absolute;
+    transform: translate(-50%, -100%);
+    cursor: default;
+    z-index: 10;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.7));
+    transition: transform 0.15s;
+  }
+  .marker:hover {
+    transform: translate(-50%, -100%) scale(1.15);
+    z-index: 20;
+  }
+  .marker-pin {
+    width: 30px;
+    height: 38px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  }
+  .marker-pin span {
+    transform: rotate(45deg);
+    font-weight: 800;
+    font-size: 11px;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  }
+  .marker-label {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 3px;
+    color: #fff;
+    pointer-events: none;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+  }
+  /* Enemy markers - red gradient */
+  .marker.enemy .marker-pin { background: linear-gradient(135deg, #e74c3c, #8b1a1a); }
+  .marker.enemy .marker-label { background: rgba(139, 26, 26, 0.9); }
+  /* Mid boss - orange */
+  .marker.midboss .marker-pin { background: linear-gradient(135deg, #f39c12, #d35400); border-color: #f39c12; }
+  .marker.midboss .marker-label { background: rgba(211, 84, 0, 0.9); }
+  /* Final boss - purple */
+  .marker.finalboss .marker-pin { background: linear-gradient(135deg, #9b59b6, #6c3483); border-color: #9b59b6; width: 36px; height: 44px; }
+  .marker.finalboss .marker-label { background: rgba(108, 52, 131, 0.9); font-size: 12px; }
+  .marker.finalboss .marker-pin span { font-size: 13px; }
+  /* Quest markers - green */
+  .marker.quest .marker-pin { background: linear-gradient(135deg, #27ae60, #1a6b3c); }
+  .marker.quest .marker-label { background: rgba(26, 107, 60, 0.9); }
+  /* Start marker - gold */
+  .marker.start .marker-pin { background: linear-gradient(135deg, #c9aa71, #8b7441); border-color: #c9aa71; width: 36px; height: 44px; }
+  .marker.start .marker-label { background: rgba(139, 116, 65, 0.9); font-size: 12px; }
+  .marker.start .marker-pin span { font-size: 13px; }
+  /* Path line */
+  .path-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+<h1>QUEST MAP — MONHEIM ALTSTADT</h1>
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:#c9aa71"></div> Start (Rathaus)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#e74c3c"></div> Gegner (Lv 1–4, 6–10)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#f39c12"></div> Mid-Boss (Lv 5)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#9b59b6"></div> Endboss (Lv 11)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#27ae60"></div> Quest-NPC</div>
+</div>
+<div class="map-container">
+  <img src="map-base.png" alt="Monheim Altstadt Map">
+
+  <!-- SVG path overlay -->
+  <svg class="path-overlay" viewBox="0 0 1000 310" preserveAspectRatio="none">
+    <polyline
+      points="880,165  850,158  810,168  770,158  730,168  690,158  640,168  600,158  560,168  520,158  480,186  440,224  390,236  340,224  290,236  240,224  100,172"
+      fill="none"
+      stroke="rgba(201,170,113,0.35)"
+      stroke-width="3"
+      stroke-dasharray="8,6"
+      stroke-linecap="round"
+    />
+  </svg>
+
+  <!-- === START (Rathaus) === -->
+  <div class="marker start" style="left:88%; top:53%">
+    <div class="marker-label">START</div>
+    <div class="marker-pin"><span>&#9733;</span></div>
+  </div>
+
+  <!-- === QUEST NPCs — Alte Schulstraße east, near start === -->
+
+  <div class="marker quest" style="left:85%; top:50%">
+    <div class="marker-label">&#9884; Ingrid</div>
+    <div class="marker-pin"><span>Q</span></div>
+  </div>
+
+  <div class="marker quest" style="left:81%; top:54%">
+    <div class="marker-label">&#9884; Eva</div>
+    <div class="marker-pin"><span>Q</span></div>
+  </div>
+
+  <div class="marker quest" style="left:77%; top:50%">
+    <div class="marker-label">&#9884; Elena</div>
+    <div class="marker-pin"><span>Q</span></div>
+  </div>
+
+  <div class="marker quest" style="left:73%; top:54%">
+    <div class="marker-label">&#9884; Henrik</div>
+    <div class="marker-pin"><span>Q</span></div>
+  </div>
+
+  <div class="marker quest" style="left:69%; top:50%">
+    <div class="marker-label">&#9884; Simon</div>
+    <div class="marker-pin"><span>Q</span></div>
+  </div>
+
+  <!-- === ENEMIES — Alte Schulstraße west (Lv 1–4) === -->
+
+  <div class="marker enemy" style="left:64%; top:54%">
+    <div class="marker-label">Simon Lv.1</div>
+    <div class="marker-pin"><span>1</span></div>
+  </div>
+
+  <div class="marker enemy" style="left:60%; top:50%">
+    <div class="marker-label">Hubi Lv.2</div>
+    <div class="marker-pin"><span>2</span></div>
+  </div>
+
+  <div class="marker enemy" style="left:56%; top:54%">
+    <div class="marker-label">Eva Lv.3</div>
+    <div class="marker-pin"><span>3</span></div>
+  </div>
+
+  <div class="marker enemy" style="left:52%; top:50%">
+    <div class="marker-label">Jess Lv.4</div>
+    <div class="marker-pin"><span>4</span></div>
+  </div>
+
+  <!-- === MID BOSS — Schelmenturm (Grabenstraße / Turmstraße) === -->
+
+  <div class="marker midboss" style="left:48%; top:60%">
+    <div class="marker-label">&#9876; Elena Lv.5 (Mid-Boss)</div>
+    <div class="marker-pin"><span>5</span></div>
+  </div>
+
+  <!-- === ENEMIES — Turmstraße (Lv 6–10) === -->
+
+  <div class="marker enemy" style="left:44%; top:72%">
+    <div class="marker-label">Daniel Lv.6</div>
+    <div class="marker-pin"><span>6</span></div>
+  </div>
+
+  <div class="marker enemy" style="left:39%; top:76%">
+    <div class="marker-label">Mirko Lv.7</div>
+    <div class="marker-pin"><span>7</span></div>
+  </div>
+
+  <div class="marker enemy" style="left:34%; top:72%">
+    <div class="marker-label">Der Vater Lv.8</div>
+    <div class="marker-pin"><span>8</span></div>
+  </div>
+
+  <div class="marker enemy" style="left:29%; top:76%">
+    <div class="marker-label">Nick Lv.9</div>
+    <div class="marker-pin"><span>9</span></div>
+  </div>
+
+  <div class="marker enemy" style="left:24%; top:72%">
+    <div class="marker-label">Lukas Lv.10</div>
+    <div class="marker-pin"><span>10</span></div>
+  </div>
+
+  <!-- === FINAL BOSS — Kapellenstraße === -->
+
+  <div class="marker finalboss" style="left:10%; top:55%">
+    <div class="marker-label">&#9760; Lennart Lv.11 (Endboss)</div>
+    <div class="marker-pin"><span>11</span></div>
+  </div>
+
+</div>
+</body>
+</html>

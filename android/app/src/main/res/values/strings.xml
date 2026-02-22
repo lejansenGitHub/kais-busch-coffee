@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Coffee Voucher</string>
+    <string name="title_activity_main">Coffee Voucher</string>
+    <string name="package_name">com.coffeevoucher.app</string>
+    <string name="custom_url_scheme">com.coffeevoucher.app</string>
+</resources>

@@ -1,0 +1,8 @@
+{
+  "appId": "com.coffeevoucher.app",
+  "appName": "Coffee Voucher",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  }
+}
