@@ -918,9 +918,19 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const e
 
     <hr class="guide-divider">
 
+    <!-- QUEST-NPCs -->
+    <div class="guide-section">
+      <div class="section-title">10. Quest-NPCs erkennen</div>
+      <div class="guide-text">Nicht alle Begegnungen sind Kämpfe — manche Personen bieten <strong>Quests</strong> an. Du erkennst Quest-NPCs daran, dass sie ein <strong>Schild mit einem großen „!“</strong> hochhalten.</div>
+      <div class="guide-text">Wenn du ein „!“ siehst, geh auf die Person zu und höre dir ihre Aufgabe an. Nach Abschluss der Quest erhältst du einen Belohnungs-Code.</div>
+      <div class="guide-text"><strong>Tipp:</strong> Halte die Augen offen — Quests belohnen dich oft mit mächtigen Skills oder seltenen Items, die dir im nächsten Kampf den Vorteil verschaffen.</div>
+    </div>
+
+    <hr class="guide-divider">
+
     <!-- RETRY -->
     <div class="guide-section">
-      <div class="section-title">10. Niederlagen & Wiederholung</div>
+      <div class="section-title">11. Niederlagen & Wiederholung</div>
       <div class="guide-text"><strong>Kampf verloren?</strong> Kein Problem — trinke ein Bier, um dich zu heilen, und fordere deinen Gegner erneut heraus. Du kannst so oft antreten, wie du möchtest.</div>
       <div class="guide-text"><strong>Quest nicht geschafft?</strong> Warte 5 Minuten, dann darfst du es erneut versuchen.</div>
       <div class="guide-text">Lord Patten ist dazu bestimmt zu gewinnen — es ist nur eine Frage der Zeit!</div>
