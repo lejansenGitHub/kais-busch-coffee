@@ -1,4 +1,4 @@
-import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */import{S as v}from"./skills-CpN84Atv.js";import{a as r,I as o,S as p}from"./hero-data-Dk_-gBUj.js";const $=document.querySelector("#app"),c=Object.entries(v),d=c.filter(([,i])=>i.type==="A"),u=c.filter(([,i])=>i.type==="P");function m([i,s]){const e=s.type==="A",t=e?"active":"passive",n=e?`${s.maxUses} ${s.maxUses!==1?"Einsätze":"Einsatz"}`:"∞",l=p[i];return`
+import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */import{b as v,I as r,S as o,a as p}from"./hero-data-C7ujWMyN.js";const $=document.querySelector("#app"),c=Object.entries(o),d=c.filter(([,i])=>i.type==="A"),u=c.filter(([,i])=>i.type==="P");function k([i,s]){const e=s.type==="A",t=e?"active":"passive",n=e?`${s.maxUses} ${s.maxUses!==1?"Einsätze":"Einsatz"}`:"∞",l=p[i];return`
     <div class="skill-slot">
       <div class="skill-badge ${t}">${s.type}</div>
       <div class="skill-info">
@@ -12,8 +12,8 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */import{
     </div>`}function a(i,s){return s.length===0?"":`
     <div class="skills-section">
       <div class="skills-header">${i}</div>
-      <div class="skills-list">${s.map(m).join("")}</div>
-    </div>`}const k=Object.entries(r).map(([i,s])=>{const e=o[i];return`
+      <div class="skills-list">${s.map(k).join("")}</div>
+    </div>`}const m=Object.entries(v).map(([i,s])=>{const e=r[i];return`
     <div class="skill-slot">
       <div class="skill-badge passive">I</div>
       <div class="skill-info">
@@ -28,6 +28,6 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */import{
     ${a("Passive",u)}
     <div class="skills-section">
       <div class="skills-header">Items</div>
-      <div class="skills-list">${k}</div>
+      <div class="skills-list">${m}</div>
     </div>
   </div>`;
