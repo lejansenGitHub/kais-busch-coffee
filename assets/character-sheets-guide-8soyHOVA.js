@@ -1,4 +1,4 @@
-import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const z=document.createElement("style");z.textContent=`
+import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const A=document.createElement("style");A.textContent=`
   .back-link {
     display: inline-block;
     margin-bottom: 16px;
@@ -349,29 +349,36 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const z
     touch-action: none;
     user-select: none;
     -webkit-user-select: none;
+    overflow: hidden;
   }
-  .zoom-overlay.visible { display: flex; align-items: center; justify-content: center; }
-  .zoom-overlay svg {
-    max-width: 100vw;
-    max-height: 100vh;
+  .zoom-overlay.visible { display: block; }
+  .zoom-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .zoom-content svg {
     transform-origin: 0 0;
+    pointer-events: none;
   }
   .zoom-close {
     position: fixed;
     top: 12px;
     right: 12px;
     z-index: 10000;
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     border: none;
     border-radius: 50%;
-    background: rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.2);
     color: #fff;
-    font-size: 22px;
+    font-size: 24px;
     line-height: 1;
     cursor: pointer;
   }
-`;document.head.appendChild(z);const G=document.getElementById("app");G.innerHTML=`
+`;document.head.appendChild(A);const P=document.getElementById("app");P.innerHTML=`
   <a href="../" class="back-link">← Zurück</a>
   <div class="character-card">
     <div class="card-header">
@@ -971,4 +978,4 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const z
     </div>
 
   </div>
-`;const t=document.createElement("div");t.className="zoom-overlay";t.innerHTML='<button class="zoom-close">×</button><div class="zoom-content"></div>';document.body.appendChild(t);const w=t.querySelector(".zoom-content");let a=1,r=0,n=0,l=null;function h(){if(!l)return;const e=t.clientWidth,i=t.clientHeight,d=l.viewBox.baseVal,f=d.width/d.height,o=e,c=e/f,x=o*a,g=c*a,y=Math.min(0,e-x),u=Math.min(0,i-g);r=Math.max(y,Math.min(0,r)),n=Math.max(u,Math.min(0,n)),l.style.width=x+"px",l.style.height=g+"px",l.style.transform=`translate(${r}px, ${n}px)`}function A(e){const i=e.cloneNode(!0);i.removeAttribute("width"),i.removeAttribute("height"),i.style.width="100%",i.style.height="auto",i.style.maxWidth="100vw",i.style.maxHeight="100vh",w.innerHTML="",w.appendChild(i),l=i,a=1,r=0,n=0,h(),t.classList.add("visible")}function S(){t.classList.remove("visible"),l=null}t.querySelector(".zoom-close").addEventListener("click",S);t.addEventListener("click",e=>{e.target===t&&S()});let s=null,m=1,v=0,k=0;t.addEventListener("touchstart",e=>{l&&(e.touches.length===2?(e.preventDefault(),s=Array.from(e.touches).map(i=>({x:i.clientX,y:i.clientY})),m=a,v=r,k=n):e.touches.length===1&&a>1&&(e.preventDefault(),s=[{x:e.touches[0].clientX,y:e.touches[0].clientY}],v=r,k=n))},{passive:!1});t.addEventListener("touchmove",e=>{if(!(!s||!l))if(e.preventDefault(),e.touches.length===2&&s.length===2){const i=Array.from(e.touches).map(p=>({x:p.clientX,y:p.clientY})),d=Math.hypot(s[1].x-s[0].x,s[1].y-s[0].y),f=Math.hypot(i[1].x-i[0].x,i[1].y-i[0].y),o=Math.max(1,Math.min(6,m*(f/d))),c=(s[0].x+s[1].x)/2,x=(s[0].y+s[1].y)/2,g=(i[0].x+i[1].x)/2,y=(i[0].y+i[1].y)/2,u=o/m;r=v+(g-c)+c*(1-u),n=k+(y-x)+x*(1-u),a=o,h()}else e.touches.length===1&&s.length===1&&(r=v+(e.touches[0].clientX-s[0].x),n=k+(e.touches[0].clientY-s[0].y),h())},{passive:!1});t.addEventListener("touchend",()=>{s=null});let b=0;t.addEventListener("touchend",e=>{if(e.touches.length>0)return;const i=Date.now();i-b<300&&(a>1.5?(a=1,r=0,n=0):(a=3,r=-t.clientWidth,n=-t.clientHeight),h()),b=i});t.addEventListener("wheel",e=>{if(!l)return;e.preventDefault();const i=e.deltaY<0?1.2:1/1.2,d=Math.max(1,Math.min(6,a*i)),f=d/a,o=e.clientX,c=e.clientY;r=o-f*(o-r),n=c-f*(c-n),a=d,h()},{passive:!1});document.querySelectorAll(".illust-panel").forEach(e=>{const i=e.querySelector("svg");i&&e.addEventListener("click",()=>A(i))});
+`;const r=document.createElement("div");r.className="zoom-overlay";r.innerHTML='<button class="zoom-close">×</button><div class="zoom-content"></div>';document.body.appendChild(r);const c=r.querySelector(".zoom-content");let o=1,s=0,a=0,u=0,v=0,d=null;function M(){const e=window.innerWidth,t=window.innerHeight,n=u*o,l=v*o;n<=e?s=(e-n)/2:s=Math.max(e-n,Math.min(0,s)),l<=t?a=(t-l)/2:a=Math.max(t-l,Math.min(0,a))}function g(){d&&(M(),d.style.transform=`translate(${s}px, ${a}px) scale(${o})`,d.style.width=u+"px",d.style.height=v+"px")}function H(e){const t=e.cloneNode(!0);t.removeAttribute("width"),t.removeAttribute("height"),c.innerHTML="",c.style.display="block",c.appendChild(t),d=t;const n=window.innerWidth,l=window.innerHeight,f=t.viewBox.baseVal,h=f&&f.width&&f.height?f.width/f.height:16/9,x=20;(n-x*2)/h<=l-x*2?(u=n-x*2,v=u/h):(v=l-x*2,u=v*h),o=1,s=0,a=0,g(),r.classList.add("visible")}function L(){r.classList.remove("visible"),d=null}function E(e,t,n){e=Math.max(1,Math.min(6,e));const l=e/o;s=t-l*(t-s),a=n-l*(n-a),o=e,g()}r.querySelector(".zoom-close").addEventListener("click",e=>{e.stopPropagation(),L()});let b=!1;r.addEventListener("touchstart",()=>{b=!1},{passive:!0});r.addEventListener("touchmove",()=>{b=!0},{passive:!0});let i=null,p=1,k=0,y=0;c.addEventListener("touchstart",e=>{d&&(e.touches.length===2?(e.preventDefault(),i=Array.from(e.touches).map(t=>({x:t.clientX,y:t.clientY})),p=o,k=s,y=a):e.touches.length===1&&o>1.01&&(e.preventDefault(),i=[{x:e.touches[0].clientX,y:e.touches[0].clientY}],k=s,y=a))},{passive:!1});c.addEventListener("touchmove",e=>{if(!(!i||!d))if(e.preventDefault(),e.touches.length===2&&i.length===2){const t=Array.from(e.touches).map(G=>({x:G.clientX,y:G.clientY})),n=Math.hypot(i[1].x-i[0].x,i[1].y-i[0].y),l=Math.hypot(t[1].x-t[0].x,t[1].y-t[0].y),f=Math.max(1,Math.min(6,p*(l/n))),h=(i[0].x+i[1].x)/2,x=(i[0].y+i[1].y)/2,D=(t[0].x+t[1].x)/2,W=(t[0].y+t[1].y)/2,S=f/p;s=k+(D-h)+h*(1-S),a=y+(W-x)+x*(1-S),o=f,g()}else e.touches.length===1&&i.length===1&&(s=k+(e.touches[0].clientX-i[0].x),a=y+(e.touches[0].clientY-i[0].y),g())},{passive:!1});c.addEventListener("touchend",e=>{if(i=null,e.touches.length>0||b)return;const t=Date.now();if(t-m<300){if(o>1.5)o=1,s=0,a=0,g();else{const n=e.changedTouches[0].clientX,l=e.changedTouches[0].clientY;E(3,n,l)}m=0}else m=t});let m=0;c.addEventListener("touchcancel",()=>{i=null});r.addEventListener("click",e=>{(e.target===r||e.target===c)&&L()});r.addEventListener("wheel",e=>{if(!d)return;e.preventDefault();const t=e.deltaY<0?1.2:1/1.2;E(o*t,e.clientX,e.clientY)},{passive:!1});let z=!1,w={x:0,y:0};c.addEventListener("mousedown",e=>{!d||o<=1.01||(z=!0,w={x:e.clientX-s,y:e.clientY-a},r.style.cursor="grabbing")});window.addEventListener("mousemove",e=>{z&&(s=e.clientX-w.x,a=e.clientY-w.y,g())});window.addEventListener("mouseup",()=>{z=!1,r.style.cursor=""});document.querySelectorAll(".illust-panel").forEach(e=>{const t=e.querySelector("svg");t&&e.addEventListener("click",()=>H(t))});
