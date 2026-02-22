@@ -13,5 +13,5 @@ export default {
     onStrike: '„Eine Lektion von deinem alten Herrn."',
     onDefeat: '„Gut gemacht. Aber denk dran \u2014 du besiegst nie wirklich einen Mann, den du nicht benennen kannst."',
   },
-  reward: { item: 'pelt' },
+  rewards: [{ item: 'pelt' }, { skill: 'tremor' }],
 };

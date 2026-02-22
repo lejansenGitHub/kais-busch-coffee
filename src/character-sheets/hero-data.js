@@ -37,11 +37,16 @@ export const SKILL_UNLOCK_CODES = {
   double_attack:  '3897',
   last_stand:     '5236',
   snipers_gambit: '4086',
+  off_balance:    '2743',
+  tremor:         '5918',
   // Quest rewards
   freeze:         '6287',
   iron_ward:      '8174',
   vertigo:        '8341',
   insight:        '7835',
+  fine_sack:      '8364',
+  crude_sack:     '1657',
+  repulsion:      '7492',
 };
 
 export const LEVEL_UP_CHOICES = [

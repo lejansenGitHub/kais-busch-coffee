@@ -28,13 +28,18 @@ function resolveCharacter(raw) {
       })
       .sort((a, b) => (a.type === 'A' ? 0 : 1) - (b.type === 'A' ? 0 : 1)),
   };
-  if (raw.reward) {
-    if (raw.reward.skill) {
-      const skill = SKILLS[raw.reward.skill];
-      resolved.reward = { type: 'skill', name: skill.name, code: SKILL_UNLOCK_CODES[raw.reward.skill] };
-    } else if (raw.reward.item) {
-      resolved.reward = { type: 'item', name: raw.reward.item.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase()), code: ITEM_UNLOCK_CODES[raw.reward.item] };
+  function resolveReward(r) {
+    if (r.skill) {
+      const skill = SKILLS[r.skill];
+      return { type: 'skill', name: skill.name, code: SKILL_UNLOCK_CODES[r.skill] };
+    } else if (r.item) {
+      return { type: 'item', name: r.item.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase()), code: ITEM_UNLOCK_CODES[r.item] };
     }
+  }
+  if (raw.rewards) {
+    resolved.rewards = raw.rewards.map(resolveReward);
+  } else if (raw.reward) {
+    resolved.rewards = [resolveReward(raw.reward)];
   }
   return resolved;
 }
@@ -162,15 +167,15 @@ function renderCard(char) {
       <div class="skills-header">Skills</div>
       <div class="skills-list">${skillsHtml}</div>
 
-      ${char.reward ? `
+      ${char.rewards ? `
       <div class="reward-section">
         <div class="skills-header">Belohnung</div>
         <div class="quest-rewards">
-          <div class="reward-row">
-            <span class="reward-type ${char.reward.type}">${char.reward.type === 'skill' ? 'S' : 'I'}</span>
-            <span class="reward-name">${char.reward.name}</span>
-            <span class="reward-code">${char.reward.code}</span>
-          </div>
+          ${char.rewards.map(r => `<div class="reward-row">
+            <span class="reward-type ${r.type}">${r.type === 'skill' ? 'S' : 'I'}</span>
+            <span class="reward-name">${r.name}</span>
+            <span class="reward-code">${r.code}</span>
+          </div>`).join('')}
         </div>
       </div>` : ''}
 

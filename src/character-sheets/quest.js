@@ -54,6 +54,7 @@ const QUESTS = {
         ],
         rewards: [
           { type: 'item', id: 'sword' },
+          { type: 'skill', id: 'fine_sack' },
         ],
       },
     ],
@@ -90,6 +91,7 @@ const QUESTS = {
         ],
         rewards: [
           { type: 'item', id: 'small_bag' },
+          { type: 'skill', id: 'repulsion' },
         ],
       },
     ],
@@ -108,6 +110,7 @@ const QUESTS = {
         ],
         rewards: [
           { type: 'item', id: 'belt' },
+          { type: 'skill', id: 'crude_sack' },
         ],
       },
     ],

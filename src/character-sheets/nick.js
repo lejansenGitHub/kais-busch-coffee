@@ -13,5 +13,5 @@ export default {
     onStrike: '„Zu langsam, Bruder."',
     onDefeat: '„Du gewinnst diese Runde. Ich bin zurück, bevor du es merkst."',
   },
-  reward: { item: 'arm_protectors' },
+  rewards: [{ item: 'arm_protectors' }, { skill: 'off_balance' }],
 };
