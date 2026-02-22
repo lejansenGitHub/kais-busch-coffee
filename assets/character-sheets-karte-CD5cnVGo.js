@@ -1,4 +1,4 @@
-import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const e=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1500" font-family="'Segoe UI', Arial, sans-serif">
+import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const T=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1500" font-family="'Segoe UI', Arial, sans-serif">
 
   <!-- Building block base (dark = buildings) -->
   <rect width="800" height="1500" fill="#d6d0c4" rx="6"/>
@@ -251,7 +251,7 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const e
   <text x="400" y="1490" text-anchor="middle" fill="#7a7060" font-size="14" letter-spacing="2">MONHEIM AM RHEIN · ALTSTADT</text>
 
 </svg>
-`,t=document.createElement("style");t.textContent=`
+`,p=document.createElement("style");p.textContent=`
   .back-link {
     display: inline-block;
     margin-bottom: 16px;
@@ -267,18 +267,51 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const e
     border-radius: 6px;
     overflow: hidden;
     margin-bottom: 16px;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: grab;
   }
+  .map-container.grabbing { cursor: grabbing; }
   .map-container svg {
     display: block;
     width: 100%;
     height: auto;
+    transform-origin: 0 0;
+    pointer-events: none;
   }
-`;document.head.appendChild(t);const n=document.getElementById("app");n.innerHTML=`
+  .map-controls {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+  .map-controls button {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #7a6a4a;
+    border-radius: 6px;
+    background: #f5f0e6;
+    color: #4a3c28;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .map-controls button:active { background: #e8e0d0; }
+`;document.head.appendChild(p);const B=document.getElementById("app");B.innerHTML=`
   <a href="../" class="back-link">← Zurück</a>
   <div class="character-card">
     <div class="card-header">
       <div class="character-name">Karte</div>
     </div>
-    <div class="map-container">${e}</div>
+    <div class="map-controls">
+      <button id="zoom-in">+</button>
+      <button id="zoom-reset">1:1</button>
+      <button id="zoom-out">−</button>
+    </div>
+    <div class="map-container" id="map-container">${T}</div>
   </div>
-`;
+`;const o=document.getElementById("map-container"),d=o.querySelector("svg");let i=1,l=0,r=0;const z=1,v=5;function a(){const t=o.clientWidth,n=o.clientHeight;d.getBoundingClientRect().width/i*i,d.getBoundingClientRect().height/i*i;const c=t*i,s=d.viewBox.baseVal.height/d.viewBox.baseVal.width*t*i,x=Math.min(0,t-c),h=Math.min(0,n-s);l=Math.max(x,Math.min(0,l)),r=Math.max(h,Math.min(0,r)),d.style.transform=`translate(${l}px, ${r}px) scale(${i})`}function g(t,n,c){t=Math.max(z,Math.min(v,t));const s=t/i;l=n-s*(n-l),r=c-s*(c-r),i=t,a()}function Q(){i=1,l=0,r=0,a()}document.getElementById("zoom-in").addEventListener("click",()=>{const t=o.getBoundingClientRect();g(i*1.4,t.width/2,t.height/2)});document.getElementById("zoom-out").addEventListener("click",()=>{const t=o.getBoundingClientRect();g(i/1.4,t.width/2,t.height/2)});document.getElementById("zoom-reset").addEventListener("click",Q);let e=null,y=1,f=0,w=0;o.addEventListener("touchstart",t=>{t.touches.length===2?(t.preventDefault(),e=Array.from(t.touches).map(n=>({x:n.clientX,y:n.clientY})),y=i,f=l,w=r):t.touches.length===1&&i>1&&(t.preventDefault(),e=[{x:t.touches[0].clientX,y:t.touches[0].clientY}],f=l,w=r)},{passive:!1});o.addEventListener("touchmove",t=>{if(e)if(t.preventDefault(),t.touches.length===2&&e.length===2){const n=Array.from(t.touches).map(k=>({x:k.clientX,y:k.clientY})),c=Math.hypot(e[1].x-e[0].x,e[1].y-e[0].y),s=Math.hypot(n[1].x-n[0].x,n[1].y-n[0].y),x=Math.max(z,Math.min(v,y*(s/c))),h=o.getBoundingClientRect(),E=(e[0].x+e[1].x)/2-h.left,L=(e[0].y+e[1].y)/2-h.top,S=(n[0].x+n[1].x)/2,M=(n[0].y+n[1].y)/2,A=(e[0].x+e[1].x)/2,R=(e[0].y+e[1].y)/2,u=x/y;l=f+(S-A)+E*(1-u),r=w+(M-R)+L*(1-u),i=x,a()}else t.touches.length===1&&e.length===1&&(l=f+(t.touches[0].clientX-e[0].x),r=w+(t.touches[0].clientY-e[0].y),a())},{passive:!1});o.addEventListener("touchend",()=>{e=null});o.addEventListener("touchcancel",()=>{e=null});let b=!1,m={x:0,y:0};o.addEventListener("mousedown",t=>{i<=1||(b=!0,m={x:t.clientX-l,y:t.clientY-r},o.classList.add("grabbing"))});window.addEventListener("mousemove",t=>{b&&(l=t.clientX-m.x,r=t.clientY-m.y,a())});window.addEventListener("mouseup",()=>{b=!1,o.classList.remove("grabbing")});o.addEventListener("wheel",t=>{t.preventDefault();const n=o.getBoundingClientRect(),c=t.clientX-n.left,s=t.clientY-n.top,x=t.deltaY<0?1.15:1/1.15;g(i*x,c,s)},{passive:!1});
