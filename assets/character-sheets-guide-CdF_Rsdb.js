@@ -335,7 +335,7 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const e
           <div class="equip-icon">🎯</div>
           <div class="equip-info">
             <div class="equip-name">Sandsäcke (3 Größen)</div>
-            <div class="equip-desc">Kleine Wurfkissen in drei Qualitätsstufen. Du wirfst sie auf die Zielscheibe. Normalerweise nutzt du die mittlere Größe — Skills können das ändern.</div>
+            <div class="equip-desc">Wurfkissen in drei Größen. Du wirfst sie auf die Zielscheibe. Normalerweise nutzt du den großen — Skills können das ändern.</div>
           </div>
         </div>
         <div class="equip-card">
@@ -416,30 +416,30 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const e
     <!-- BEAN BAG QUALITY -->
     <div class="guide-section">
       <div class="section-title">4. Sandsack-Qualitäten</div>
-      <div class="guide-text">Es gibt <strong>drei Größen</strong> von Sandsäcken. Je größer, desto besser zu greifen und zu werfen:</div>
+      <div class="guide-text">Es gibt <strong>drei Größen</strong> von Sandsäcken. Die mittleren sind am besten — schwerer und liegen präzise, ohne zu verspringen:</div>
 
       <div class="bag-grid">
         <div class="bag-card">
           <div class="bag-icon">▪️</div>
           <div class="bag-size">Klein</div>
-          <div class="bag-label">5×5 cm<br>Schwer zu greifen</div>
+          <div class="bag-label">5×5 cm<br>Zu leicht, verspringt</div>
           <div class="bag-stars">★</div>
         </div>
         <div class="bag-card highlight">
           <div class="bag-icon">◼️</div>
           <div class="bag-size">Mittel</div>
-          <div class="bag-label">7×7 cm<br>Standard</div>
-          <div class="bag-stars">★★</div>
+          <div class="bag-label">7×7 cm<br>Schwer, bleibt liegen</div>
+          <div class="bag-stars">★★★</div>
         </div>
         <div class="bag-card">
           <div class="bag-icon">⬛</div>
           <div class="bag-size">Groß</div>
-          <div class="bag-label">10×10 cm<br>Leicht zu werfen</div>
-          <div class="bag-stars">★★★</div>
+          <div class="bag-label">10×10 cm<br>Standard</div>
+          <div class="bag-stars">★★</div>
         </div>
       </div>
 
-      <div class="guide-text" style="margin-top: 12px;">Normalerweise wirfst du mit dem <strong>mittleren</strong> Sandsack. Manche Skills zwingen dich oder deinen Gegner, eine andere Qualität zu benutzen.</div>
+      <div class="guide-text" style="margin-top: 12px;">Normalerweise wirfst du mit dem <strong>großen</strong> Sandsack (Standard). Manche Skills ändern die Qualität — der mittlere ist eine Verbesserung, der kleine eine Bestrafung.</div>
     </div>
 
     <hr class="guide-divider">
