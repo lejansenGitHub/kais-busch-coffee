@@ -856,7 +856,7 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const e
           <div class="skill-ex-badge passive">P</div>
           <div class="skill-ex-name">Last Stand</div>
         </div>
-        <div class="skill-ex-desc">Unter 5 HP verursachen alle deine Treffer <strong>+2 Bonusschaden</strong>.</div>
+        <div class="skill-ex-desc">Unter 10 HP verursachen alle deine Treffer <strong>+2 Bonusschaden</strong>.</div>
         <div class="skill-ex-scenario">💡 Szenario: Du hast nur noch 3 HP — aber jetzt zählt jeder deiner Würfe 2 Schaden mehr! Ein Innentreffer, der normalerweise 5 macht, macht jetzt 7. Gefährlich für deinen Gegner!</div>
       </div>
     </div>
