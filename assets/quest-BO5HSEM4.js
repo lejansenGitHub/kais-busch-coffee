@@ -18,14 +18,15 @@ What German word is hidden here?</em>
 
 <em>Riddle 3:
 "She wanted to TAG along, but only during daylight."
-What German word is hidden here?</em>`,criteria:["Alle drei deutschen Wörter wurden korrekt erraten und Elena gesagt"],rewards:[{type:"skill",id:"insight"}]}]},martina:{name:"Martina",title:"Die Dirigentin",portrait:"🎵",intro:'Martina steht inmitten eines kleinen Platzes und dirigiert — doch kein Orchester ist zu sehen. Ihre Hände zeichnen unsichtbare Noten in die Luft. Als sie Lord Patten bemerkt, hält sie inne: „Ah, ein neues Publikum! Oder besser — ein neuer Musiker? Die Musik dieser Welt ist seltsam, aber ich spüre ihren Rhythmus. Kannst du ihn auch spüren?"',quests:[{title:"Der Takt der Altstadt",task:`Martina klatscht einen Rhythmus vor — Lord Patten muss ihn nachklatschen. Der Rhythmus wird in 5 Runden immer länger:
+What German word is hidden here?</em>`,criteria:["Alle drei deutschen Wörter wurden korrekt erraten und Elena gesagt"],rewards:[{type:"skill",id:"insight"}]}]},martina:{name:"Martina",title:"Die Dirigentin",portrait:"🎵",intro:'Martina steht inmitten eines kleinen Platzes und dirigiert — doch kein Orchester ist zu sehen. Ihre Hände zeichnen unsichtbare Noten in die Luft. Als sie Lord Patten bemerkt, hält sie inne: „Ah, ein neues Publikum! Oder besser — ein neuer Musiker? Die Musik dieser Welt ist seltsam, aber ich spüre ihren Rhythmus. Kannst du ihn auch spüren?"',quests:[{title:"Der Takt der Altstadt",task:`Martina klatscht einen Rhythmus vor — Lord Patten muss ihn nachklatschen. Jede Runde hat 8 Schläge mit unterschiedlichen Mustern:
 
-<em>Runde 1: schnell schnell
-Runde 2: schnell schnell — Pause
-Runde 3: schnell schnell — Pause — schnell schnell
-Runde 4: schnell schnell — Pause — schnell schnell — Pause
-Runde 5: schnell schnell — Pause — schnell schnell — Pause — schnell schnell</em>
+<em>Runde 1: schnell schnell — Pause — langsam — schnell schnell — Pause
+Runde 2: langsam — schnell schnell — schnell schnell — Pause — langsam
+Runde 3: schnell schnell — langsam — Pause — schnell schnell — langsam
+Runde 4: Pause — langsam — schnell schnell — langsam — schnell schnell
+Runde 5: langsam — Pause — schnell schnell — Pause — langsam — schnell schnell</em>
 
+„Schnell" = kurzer Klatscher, „Langsam" = betonter, langer Klatscher, „Pause" = Stille.
 Mindestens 3 von 5 Runden müssen korrekt nachgeklatscht werden.
 
 „Musik ist das Einzige, was Mauern durchbrechen kann — im wörtlichen Sinne. Aber dafür braucht man Taktgefühl. Zeig mir deins."`,criteria:["Mindestens 3 von 5 Rhythmus-Runden wurden korrekt nachgeklatscht"],rewards:[{type:"quest_item",name:"Notenblatt"}]}]},"hubi-quest":{name:"Hubi",title:"Die Barriere am Schelmenturm",portrait:"🎶",intro:'Vor dem Schelmenturm flimmert eine unsichtbare Wand in der Luft. Wer hindurchzugehen versucht, wird zurückgestoßen. Lennart runzelt die Stirn: „Magisch. Aber nicht unüberwindbar — ich spüre, dass Musik der Schlüssel ist. Hast du etwas, womit man spielen könnte?"',quests:[{title:"Die Melodie der Barriere",task:`Lord Patten muss die Flöte (von Hubi erhalten) zusammen mit dem Notenblatt (von Martina erhalten) verwenden, um eine Melodie zu spielen. Der Spieler spielt auf der Flöte die Noten nach, die auf dem Notenblatt stehen.
