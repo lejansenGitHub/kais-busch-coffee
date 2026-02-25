@@ -1,4 +1,4 @@
-import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const Q=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1500" font-family="'Segoe UI', Arial, sans-serif">
+import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const R=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1500" font-family="'Segoe UI', Arial, sans-serif">
 
   <!-- Building block base (dark = buildings) -->
   <rect width="800" height="1500" fill="#d6d0c4" rx="6"/>
@@ -187,10 +187,10 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const Q
   <text x="365" y="685" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Q</text>
   <text x="365" y="663" text-anchor="middle" fill="#2c3e50" font-size="11" font-weight="bold">18. Simon</text>
 
-  <!-- 19. Hendrik (Quest) — MOVED to start of Zone 4 -->
+  <!-- 19. Henrik (Quest) — MOVED to start of Zone 4 -->
   <circle cx="353" cy="633" r="14" fill="#2980b9" stroke="white" stroke-width="1.5"/>
   <text x="353" y="638" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Q</text>
-  <text x="353" y="616" text-anchor="middle" fill="#2c3e50" font-size="11" font-weight="bold">19. Hendrik</text>
+  <text x="353" y="616" text-anchor="middle" fill="#2c3e50" font-size="11" font-weight="bold">19. Henrik</text>
 
   <!-- 20. Eva (Lv9) -->
   <circle cx="341" cy="586" r="14" fill="#c0392b" stroke="white" stroke-width="1.5"/>
@@ -251,7 +251,7 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const Q
   <text x="400" y="1490" text-anchor="middle" fill="#7a7060" font-size="14" letter-spacing="2">MONHEIM AM RHEIN · ALTSTADT</text>
 
 </svg>
-`,p=document.createElement("style");p.textContent=`
+`,z=document.createElement("style");z.textContent=`
   .back-link {
     display: inline-block;
     margin-bottom: 16px;
@@ -267,11 +267,12 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const Q
     border-radius: 6px;
     overflow: hidden;
     margin-bottom: 16px;
-    touch-action: none;
+    touch-action: pan-x pan-y;
     user-select: none;
     -webkit-user-select: none;
-    cursor: grab;
+    cursor: default;
   }
+  .map-container.zoomed { cursor: grab; }
   .map-container.grabbing { cursor: grabbing; }
   .map-container svg {
     display: block;
@@ -301,7 +302,7 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const Q
     justify-content: center;
   }
   .map-controls button:active { background: #e8e0d0; }
-`;document.head.appendChild(p);const R=document.getElementById("app");R.innerHTML=`
+`;document.head.appendChild(z);const B=document.getElementById("app");B.innerHTML=`
   <a href="../" class="back-link">← Zurück</a>
   <div class="character-card">
     <div class="card-header">
@@ -312,6 +313,6 @@ import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */const Q
       <button id="zoom-reset">1:1</button>
       <button id="zoom-out">−</button>
     </div>
-    <div class="map-container" id="map-container">${Q}</div>
+    <div class="map-container" id="map-container">${R}</div>
   </div>
-`;const i=document.getElementById("map-container"),w=i.querySelector("svg");let o=1,l=0,r=0;const z=1,v=5;function d(){const t=i.clientWidth,n=i.clientHeight,c=t*o,s=w.viewBox.baseVal.height/w.viewBox.baseVal.width*t*o,x=Math.min(0,t-c),a=Math.min(0,n-s);l=Math.max(x,Math.min(0,l)),r=Math.max(a,Math.min(0,r)),w.style.transform=`translate(${l}px, ${r}px) scale(${o})`}function g(t,n,c){t=Math.max(z,Math.min(v,t));const s=t/o;l=n-s*(n-l),r=c-s*(c-r),o=t,d()}function B(){o=1,l=0,r=0,d()}document.getElementById("zoom-in").addEventListener("click",()=>{const t=i.getBoundingClientRect();g(o*1.4,t.width/2,t.height/2)});document.getElementById("zoom-out").addEventListener("click",()=>{const t=i.getBoundingClientRect();g(o/1.4,t.width/2,t.height/2)});document.getElementById("zoom-reset").addEventListener("click",B);let e=null,y=1,h=0,f=0;i.addEventListener("touchstart",t=>{t.touches.length===2?(t.preventDefault(),e=Array.from(t.touches).map(n=>({x:n.clientX,y:n.clientY})),y=o,h=l,f=r):t.touches.length===1&&o>1&&(t.preventDefault(),e=[{x:t.touches[0].clientX,y:t.touches[0].clientY}],h=l,f=r)},{passive:!1});i.addEventListener("touchmove",t=>{if(e)if(t.preventDefault(),t.touches.length===2&&e.length===2){const n=Array.from(t.touches).map(k=>({x:k.clientX,y:k.clientY})),c=Math.hypot(e[1].x-e[0].x,e[1].y-e[0].y),s=Math.hypot(n[1].x-n[0].x,n[1].y-n[0].y),x=Math.max(z,Math.min(v,y*(s/c))),a=i.getBoundingClientRect(),E=(e[0].x+e[1].x)/2-a.left,L=(e[0].y+e[1].y)/2-a.top,S=(n[0].x+n[1].x)/2,M=(n[0].y+n[1].y)/2,A=(e[0].x+e[1].x)/2,T=(e[0].y+e[1].y)/2,u=x/y;l=h+(S-A)+E*(1-u),r=f+(M-T)+L*(1-u),o=x,d()}else t.touches.length===1&&e.length===1&&(l=h+(t.touches[0].clientX-e[0].x),r=f+(t.touches[0].clientY-e[0].y),d())},{passive:!1});i.addEventListener("touchend",()=>{e=null});i.addEventListener("touchcancel",()=>{e=null});let b=!1,m={x:0,y:0};i.addEventListener("mousedown",t=>{o<=1||(b=!0,m={x:t.clientX-l,y:t.clientY-r},i.classList.add("grabbing"))});window.addEventListener("mousemove",t=>{b&&(l=t.clientX-m.x,r=t.clientY-m.y,d())});window.addEventListener("mouseup",()=>{b=!1,i.classList.remove("grabbing")});i.addEventListener("wheel",t=>{t.preventDefault();const n=i.getBoundingClientRect(),c=t.clientX-n.left,s=t.clientY-n.top,x=t.deltaY<0?1.15:1/1.15;g(o*x,c,s)},{passive:!1});
+`;const i=document.getElementById("map-container"),w=i.querySelector("svg");let o=1,l=0,c=0;const v=1,E=5;function d(){const t=i.clientWidth,n=i.clientHeight,r=t*o,s=w.viewBox.baseVal.height/w.viewBox.baseVal.width*t*o,x=Math.min(0,t-r),a=Math.min(0,n-s);l=Math.max(x,Math.min(0,l)),c=Math.max(a,Math.min(0,c)),w.style.transform=`translate(${l}px, ${c}px) scale(${o})`}function g(t,n,r){t=Math.max(v,Math.min(E,t));const s=t/o;l=n-s*(n-l),c=r-s*(r-c),o=t,d(),b()}function N(){o=1,l=0,c=0,d(),b()}document.getElementById("zoom-in").addEventListener("click",()=>{const t=i.getBoundingClientRect();g(o*1.4,t.width/2,t.height/2)});document.getElementById("zoom-out").addEventListener("click",()=>{const t=i.getBoundingClientRect();g(o/1.4,t.width/2,t.height/2)});document.getElementById("zoom-reset").addEventListener("click",N);let e=null,y=1,h=0,f=0;function b(){const t=o>1;i.style.touchAction=t?"none":"pan-x pan-y",i.classList.toggle("zoomed",t)}i.addEventListener("touchstart",t=>{t.touches.length===2?(t.preventDefault(),e=Array.from(t.touches).map(n=>({x:n.clientX,y:n.clientY})),y=o,h=l,f=c):t.touches.length===1&&o>1&&(t.preventDefault(),e=[{x:t.touches[0].clientX,y:t.touches[0].clientY}],h=l,f=c)},{passive:!1});i.addEventListener("touchmove",t=>{if(e)if(t.preventDefault(),t.touches.length===2&&e.length===2){const n=Array.from(t.touches).map(p=>({x:p.clientX,y:p.clientY})),r=Math.hypot(e[1].x-e[0].x,e[1].y-e[0].y),s=Math.hypot(n[1].x-n[0].x,n[1].y-n[0].y),x=Math.max(v,Math.min(E,y*(s/r))),a=i.getBoundingClientRect(),L=(e[0].x+e[1].x)/2-a.left,S=(e[0].y+e[1].y)/2-a.top,M=(n[0].x+n[1].x)/2,A=(n[0].y+n[1].y)/2,T=(e[0].x+e[1].x)/2,Q=(e[0].y+e[1].y)/2,k=x/y;l=h+(M-T)+L*(1-k),c=f+(A-Q)+S*(1-k),o=x,d(),b()}else t.touches.length===1&&e.length===1&&(l=h+(t.touches[0].clientX-e[0].x),c=f+(t.touches[0].clientY-e[0].y),d())},{passive:!1});i.addEventListener("touchend",()=>{e=null});i.addEventListener("touchcancel",()=>{e=null});let u=!1,m={x:0,y:0};i.addEventListener("mousedown",t=>{o<=1||(u=!0,m={x:t.clientX-l,y:t.clientY-c},i.classList.add("grabbing"))});window.addEventListener("mousemove",t=>{u&&(l=t.clientX-m.x,c=t.clientY-m.y,d())});window.addEventListener("mouseup",()=>{u=!1,i.classList.remove("grabbing")});i.addEventListener("wheel",t=>{t.preventDefault();const n=i.getBoundingClientRect(),r=t.clientX-n.left,s=t.clientY-n.top,x=t.deltaY<0?1.15:1/1.15;g(o*x,r,s)},{passive:!1});
